@@ -1,0 +1,34 @@
+## Title: |c00bfff[增强]-QuestMap(任务地图)|r
+## Version: 3.15
+## AddOnVersion: 315
+## Author: CaptainBlagbird, Sharlikran
+## APIVersion: 101037 101038
+## Description: Displays quest givers on the world map
+## SavedVariables: QuestMap_SavedVariables
+## DependsOn: LibMapPins-1.0>=10038 LibGPS>=69 LibQuestData>=259 LibMapData>=111
+## OptionalDependsOn: LibAddonMenu-2.0>=34 LibMsgWin-1.0>=11 LibDebugLogger>=196 DebugLogViewer
+
+; Resources
+Init.lua
+
+; Languages
+lang/Strings-en.lua
+lang/Strings-$(language).lua
+
+; Main files
+Settings.lua
+Main.lua
+
+; Special thanks
+; - svan:           French translation
+; - Provision:      French translation
+; - Sir Quackberry: Cadwell & Skill quest types; Quest locations update
+; - apalma200:      Wrothgar quests
+
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United
+; States and/or other countries. All rights reserved.
+;
+; You can read the full terms at:
+; https://account.elderscrollsonline.com/add-on-terms

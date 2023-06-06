@@ -1,0 +1,9 @@
+<GuiXml>
+    <Controls>
+        <TopLevelControl name="MuchSmarterAutoLoot">
+            <OnInitialized>
+                MuchSmarterAutoLoot_Startup(self)
+            </OnInitialized> 
+        </TopLevelControl>
+    </Controls>
+</GuiXml>

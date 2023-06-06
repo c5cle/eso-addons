@@ -1,0 +1,77 @@
+## This Add-on is not created by, affiliated with, or sponsored by, ZeniMax Media Inc. or its affiliates.
+## The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States
+## and/or other countries. All rights reserved.
+
+## Title: |c00bfff[增强]-PlayerRoleIndicator(显示队友位置图标)|r
+## Description: A simple addon that adds role indicators above grouped players and notifies grouped player deaths + resurrections.
+## Author: Parietic
+## APIVersion: 101035 101036
+## AddOnVersion: 121
+## Version: 1.2.1
+## DependsOn: LibAddonMenu-2.0 LibCustomMenu
+## SavedVariables: PlayerRoleIndicatorVars
+
+Matrix.lua
+Menu.lua
+Main.lua
+PlayerRoleIndicator.xml
+
+##Change log:
+##Version 1.2.1:
+##- Using new API function GetUnitRawWorldPosition(string unitTag), should fix addon not working in some areas
+##
+##Version 1.2.0:
+##- New dependency, LibCustomMenu.
+##- Global colours for resurrection pending and resurrection in progress.
+##- Each role can have different colours for alive and dead players.
+##- Added notifications.
+##	- Colour, show dead/resection and icon used come from settings of each respective role.
+##	- Duration, location and size can be customized.
+##	- Notifications can be turned off.
+##-Added custom roles.
+##	- Name can be customized.
+##	- Has same setting options as other roles.
+##	- To add players to said custom role you can right click players in the group menu.
+##	- Priority of roles goes Custom role (Top most custom role will have priority) > Leader > LFG role
+##- Minor bug fixes
+##
+##Version 1.1.6:
+##-Minor bug fixes.
+##
+##Version 1.1.5:
+##-Major improvements to icon positioning. Different FOV/Resolution/UI scaling/Aspect ratio should no longer cause issues.
+##
+##Version 1.1.4:
+##- Minor bug fixes.
+##
+##Version 1.1.3:
+##- Minor bug fixes.
+##
+##Version 1.1.2:
+##- Possible fix for different UI scaling.
+##- Cleaned up source code and improved performance.
+##
+##Version 1.1.1:
+##- Now when a player has died in vCR while fighting Z'Maja the icon will change colour indicating if their shade is alive or not.
+##- Colour for Shadow of the Fallen is customizable.
+##- You can toggle for Shadow of the Fallen indication on or off in the addon menu.
+##- Minor bug fixes and tweaks.
+##
+##Version 1.1.0:
+##- Cleaned up source code.
+##- Max group size increased to 24 for larger groups.
+##- You can now change the colour of icons for each role.
+##- You now have a selection of icons to use for each role.
+##- Possible fix for icon drift as they get closer to the edge of the screen (Need testing on other resolutions).
+##- If icons are set to only show above dead players the icon will not appear if the payer is being resurrected or has resurrection pending.
+##
+##Version 1.0.2:
+##- Minor bug fix.
+##
+##Version 1.0.1:
+##- Added the required dependencies to addon description on ESO UI (Thanks Baertram for pointing this out).
+##- No longer places an icon above the user.
+##- Removed some test code that was left in, and was causing the icons to disappear at range.
+##- Added saved variables for multiple servers (Thanks Baertram for pointing this out).
+
+; RavenVersion: 20221231130626

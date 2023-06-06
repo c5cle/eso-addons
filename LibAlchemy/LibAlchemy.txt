@@ -1,0 +1,10 @@
+## Title: LibAlchemy
+## Author: Hyperioxes
+## APIVersion: 101037 101038
+## Version: 1.5
+## AddOnVersion: 15
+## IsLibrary: true
+## DependsOn: LibPrice
+
+LibAlchemy.lua
+LibAlchemy_Database.lua

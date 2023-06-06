@@ -1,0 +1,12 @@
+<Bindings>
+	<Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
+		<Category name="|c67b1e9S|c4779ce'rendarr|r">
+			<Action name="TOGGLE_VISIBILITY">
+				<Up>Srendarr.KeybindVisibilityToggle()</Up>
+			</Action>
+			<Action name="UPDATE_GEAR_SETS">
+				<Up>Srendarr.UpdateGearSets()</Up>
+			</Action>
+		</Category>
+	</Layer>
+</Bindings>

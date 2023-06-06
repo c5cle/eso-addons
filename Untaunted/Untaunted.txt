@@ -1,0 +1,22 @@
+## Title: |c00bfff[增强]-Untaunted(嘲讽显示)|r
+## APIVersion: 101037
+## Author: Solinur
+## Version: 1.1.4
+## AddOnVersion: 10104
+## DependsOn: LibAddonMenu-2.0
+## OptionalDependsOn: 
+## SavedVariables: Untaunted_Save
+
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. 
+; The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. 
+; All rights reserved
+;
+; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+lang\en.lua
+lang\$(language).lua
+
+Untaunted.lua
+
+bindings.xml
+Untaunted.xml

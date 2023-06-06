@@ -1,0 +1,22 @@
+<GuiXml>
+    <!-- common font string defintions for all language modes. -->
+    <String name="FZCS_FONT" value="LMP_zhFontFI/fonts/FZCS.otf" />
+    <String name="FZFS_FONT" value="LMP_zhFontFI/fonts/FZFS.otf" />
+    <String name="FZGL_FONT" value="LMP_zhFontFI/fonts/FZGL.otf" />
+    <String name="FZLTKS_R_FONT" value="LMP_zhFontFI/fonts/FZLTKS.otf" />
+    <String name="FZTJLS_FONT" value="LMP_zhFontFI/fonts/FZTJLS.otf" />
+    <String name="FZXZ_FONT" value="LMP_zhFontFI/fonts/FZXZ.otf" />
+    <String name="FZYBKS_FONT" value="LMP_zhFontFI/fonts/FZYBKS.otf" />
+    <String name="FZYBXS_FONT" value="LMP_zhFontFI/fonts/FZYBXS.otf" />
+    <String name="FZZDH_FONT" value="LMP_zhFontFI/fonts/FZZDH.otf" />
+    <String name="FZZY_FONT" value="LMP_zhFontFI/fonts/FZZY.otf" />
+    <String name="HYMCKB_FONT" value="LMP_zhFontFI/fonts/HYMCKB.otf" />
+    <String name="SSFMT_FONT" value="LMP_zhFontFI/fonts/SSFMT.otf" />
+    <String name="SSYFSXT_FONT" value="LMP_zhFontFI/fonts/SSYFSXT.otf" />
+    <String name="SSZRT_FONT" value="LMP_zhFontFI/fonts/SSZRT.otf" />
+   <String name="XZZB_FONT" value="LMP_zhFontFI/fonts/XZZB.otf" />
+    <String name="GF1_FONT" value="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf" />
+    <String name="GF2_FONT" value="EsoUI/Common/Fonts/MYoyoPRC-Medium.otf" />
+
+
+</GuiXml>

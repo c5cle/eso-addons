@@ -1,0 +1,335 @@
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax Media
+; Inc. or its affiliates. The Elder Scrolls and related logos are registered
+; trademarks or trademarks of ZeniMax Media Inc. in the United States and/or
+; other countries. All rights reserved.
+; https://account.elderscrollsonline.com/add-on-terms
+
+## Title: |c00bfff[增强]-ItemSetBrowser(物品浏览)|r
+## Description: List and browse the game's item sets with tracking of Item Set Collection progress
+## Author: @code65536
+## Version: 4.4.8
+## APIVersion: 101037 101038
+## SavedVariables: ItemBrowserSavedVariables
+## DependsOn: LibExtendedJournal>=9
+## OptionalDependsOn: LibMultiAccountSets>=14 LibAddonMenu-2.0
+
+LibCodesCommonCode.lua
+
+l10n/default.lua
+l10n/$(language).lua
+
+ItemBrowser.lua
+Data.lua
+Data.$(APIVersion).lua
+Browser.xml
+Browser.lua
+Tooltip.lua
+Bindings.xml
+
+; Changelog:
+;
+; Version 4.4.8 (2023/05/01)
+; * Added support for Update 38 (Necrom)
+;
+; Version 4.4.7 (2023/02/13)
+; * Added support for Update 37 (Scribes of Fate)
+;
+; Version 4.4.6 (2022/09/23)
+; * Added support for Update 36 (Firesong)
+;
+; Version 4.4.5 (2022/07/28)
+; * Added support for Update 35 (Lost Depths)
+;
+; Version 4.4.4 (2022/06/06)
+; * Fixed an issue where antiquity fragment information could be incorrectly
+;   shown when browsing data in the context of a different server
+; * Updated French localization by @XXXspartiateXXX
+;
+; Version 4.4.3 (2022/05/05)
+; * Fixed a Lua error encountered when toggling the option for the display of
+;   completion percentages
+;
+; Version 4.4.2 (2022/04/20)
+; * Added support for Update 34 (High Isle)
+;
+; Version 4.4.1 (2022/03/09)
+; * Increased the minimum version requirement of LibMultiAccountSets (optional
+;   dependency for multi-account features) to 3.0.2 or newer
+;
+; Version 4.4.0 (2022/02/23)
+; * For users of LibMultiAccountSets with data spanning multiple servers, it is
+;   now possible to view item set collection data for accounts on another server
+; * Increased the minimum version requirement of LibMultiAccountSets (optional
+;   dependency for multi-account features) to 3.0.0 or newer
+;
+; Version 4.3.1 (2022/02/19)
+; * Borrowing a feature from Character Knowledge, "+" or "-" can now be used as
+;   special search terms in the general search to filter for fully-completed and
+;   incomplete sets, respectively (crafted sets are considered to be completed)
+;   - This is separate from and can be used in conjunction with the "-" prefix
+;     introduced in the previous version; for example, "sunsp -perf -" will show
+;     all non-perfected Sunspire sets that have not been completed
+;   - This is not applicable for the set bonus search mode, as "+" and "-" have
+;     different, pre-existing meanings in that search mode
+;
+; Version 4.3.0 (2022/02/17)
+; * The "-" prefix can now be used in the general search to exclude a search
+;   term
+;   - For example, searching for "sunsp" will display all eight sets from
+;     Sunspire, searching for "sunsp perf" will display the four perfected sets,
+;     and now it will be possible to search for "sunsp -perf" to display the
+;     four non-perfected sets
+; * Added support for Update 33 (Ascending Tide)
+;
+; Version 4.2.1 (2021/09/29)
+; * Fixed an issue with the display of antiquity fragment names in non-English
+;   game clients
+;
+; Version 4.2.0 (2021/09/28)
+; * Item tooltips for in-progress Mythic items will now include information
+;   about the item's antiquity fragments
+; * Added support for Update 32 (The Deadlands)
+;
+; Version 4.1.6 (2021/07/14)
+; * Added support for Update 31 (Waking Flame)
+;
+; Version 4.1.5 (2021/06/02)
+; * Fixed an issue where tooltips for currently-equipped companion gear were
+;   incorrectly displaying collection information for player-equipped gear
+;
+; Version 4.1.4 (2021/06/01)
+; * Improved the tooltip text for uncollectible items belonging to collectible
+;   sets
+;
+; Version 4.1.3 (2021/05/12)
+; * Improved the handling of quest reward items
+;
+; Version 4.1.2 (2021/04/20)
+; * Added support for Update 30 (Blackwood)
+;
+; Version 4.1.1 (2021/03/29)
+; * Sample item pieces that are linked in chat will now be linked as bound
+;   items, so that Loot Log's chat scanning feature will not consider the items
+;   to be tradeable
+;
+; Version 4.1.0 (2021/03/22)
+; * Added Favorites feature; adding and removing sets from Favorites is done via
+;   the context menu that is invoked by right-clicking on a set in the browser
+;
+; Version 4.0.1 (2021/02/28)
+; * It is now possible for external addons to add context menu items to this
+;   addon's browser UI
+; * LibExtendedJournal updated to version 1.1.0
+;
+; Version 4.0.0 (2021/02/25)
+; * Internal code restructuring; this addon is now part of the Extended Journal
+;
+; Version 3.2.2 (2021/01/27)
+; * Added support for Update 29 (Flames of Ambition)
+;
+; Version 3.2.1 (2021/01/01)
+; * Increased the minimum version requirement of LibMultiAccountSets (optional
+;   dependency for multi-account features) to 1.7 or newer
+;
+; Version 3.2.0 (2020/12/11)
+; * Set piece collection information for external item tooltips can now be
+;   optionally set to a new "Not Collected" display mode, in which only
+;   uncollected pieces will be listed in order to produce a more compact summary
+; * Account collection information for external item tooltips will now strike
+;   through the names of accounts that have not collected an item, if the item
+;   cannot be traded with that account (i.e., if the item is bound or if the
+;   account is not in the item's BoP-tradeable eligibility list)
+;
+; Version 3.1.0 (2020/12/07)
+; * Added tooltip support for item set containers (e.g., the equipment coffers
+;   from the Cyrodiil town vendors or the 5-key Undaunted shoulder coffers)
+;
+; Version 3.0.1 (2020/12/04)
+; * Improved the handling of item tooltips for uncollectible items belonging to
+;   collectible sets (i.e., discontinued items)
+;
+; Version 3.0.0 (2020/11/25)
+; * New feature: Item Set Browser will now add details about the collection
+;   progress of item sets to item tooltips throughout the game; this feature can
+;   be configured (or disabled) via the new Item Set Browser addon settings
+;   panel
+; * The item set completion progress column will now display the transmution
+;   crystal cost of reconstruction instead of the completion percentage; the
+;   display of the completion percentage can be restored via the new Item Set
+;   Browser addon settings panel
+;
+; Version 2.3.1 (2020/11/21)
+; * When sorting by item set completion percentage, the number of pieces
+;   available for that set will now be used as a tiebreaker
+;
+; Version 2.3.0 (2020/11/17)
+; * Added LibMultiAccountSets as an optional library dependency; this enables
+;   users to examine the Item Set Collection status of their other accounts
+;
+; Version 2.2.7 (2020/11/11)
+; * Added percentage to the collection ratio status display in the lower-left
+;   corner
+;
+; Version 2.2.6 (2020/11/08)
+; * Fixed an issue where the Current Zone filter might use the incorrect zone
+;   the first time it is selected
+;
+; Version 2.2.5 (2020/11/06)
+; * The total number of collected and possible collectible pieces matching the
+;   current search filter will now be displayed in the lower-left corner (the
+;   existing number in the lower-right corner is the number of sets that match
+;   the current search filter)
+;
+; Versions 2.2.2 to 2.2.4 (2020/11/05)
+; * Added the /ib chat command as a shorthand alternative to /itembrowser
+; * Added a new category filter for all sets found in the current zone
+; * The drop-down category filter selection will now persist across relogs and
+;   reloads
+;
+; Version 2.2.1 (2020/11/04)
+; * Other addons (e.g., Loot Log) can now call Item Set Browser's code to add
+;   item set collection information to their item tooltips
+;
+; Version 2.2.0 (2020/11/04)
+; * Added information to the item tooltips to indicate which pieces of a
+;   collectible set have been collected
+; * Added a new category filter for collectible (i.e., non-crafted) gear
+;
+; Version 2.1.0 (2020/11/02)
+; * Added a new column to display the Item Set Collection completion progress
+;   for each set
+; * Sets from the Craglorn trials can now be found by their common names in
+;   English (e.g., "Mending" for Healing Mage)
+;
+; Version 2.0.3 (2020/09/24)
+; * Added support for Update 28 (Markarth)
+;
+; Version 2.0.2 (2020/08/24)
+; * Added support for Update 27 (Stonethorn)
+;
+; Version 2.0.1 (2020/05/26)
+; * Cleaned up some strings for easier localization
+;
+; Version 2.0.0 (2020/04/21)
+; * Renamed the addon from "Itemization Browser" to "Item Set Browser"
+; * Added support for Update 26 (Greymoor)
+; * Internal code restructuring
+;
+; Version 1.3.0 (2020/02/05)
+; * Added support for Update 25 (Harrowstorm)
+; * Added town sourcing information for sets acquired in Cyrodiil
+;
+; Version 1.2.3 (2019/10/22)
+; * Added support for Update 24 (Dragonhold)
+;
+; Version 1.2.2 (2019/07/08)
+; * Added support for Update 23 (Scalebreaker)
+;
+; Version 1.2.1 (2019/04/22)
+; * Added support for Update 22 (Elsweyr)
+;
+; Version 1.2.0 (2019/02/17)
+; * The "|" operator (logical or) can now be used for search
+;
+; Version 1.1.14 (2019/02/12)
+; * Added support for Update 21 (Wrathstone)
+;
+; Version 1.1.13 (2018/10/22)
+; * The overland sets for Clockwork City and Murkmire will now list Asylum
+;   Sanctorium and Blackrose Prison, respectively, as possible sources
+;
+; Version 1.1.12 (2018/10/07)
+; * Jewelry sets will now be shown in legendary quality instead of epic
+; * Renamed the "Alliance War" category to "Player VS Player"
+; * Renamed the "Monster" item type to "Undaunted" (English version only)
+;
+; Version 1.1.11 (2018/10/06)
+; * Added support for Update 20 (Murkmire)
+;
+; Version 1.1.10 (2018/07/31)
+; * Added support for Update 19 (Wolfhunter)
+;
+; Version 1.1.9 (2018/05/24)
+; * Corrected the location for Sload's Semblance from Summerset to Artaeum
+; * Corrected the location for Fortified Brass from The Clockwork City to The
+;   Brass Fortress
+;
+; Version 1.1.8 (2018/05/22)
+; * Added support for Update 18 (Summerset)
+;
+; Version 1.1.7 (2018/02/12)
+; * Added support for Update 17 (Dragon Bones)
+; * Removed the now-redundant style information from the bottom of the item
+;   tooltips (as of Update 17, the base game tooltips will identify the style
+;   in the upper left corner)
+; * Ability-altering weapon sets are now listed under their set names rather
+;   than item names
+; * Fixed an issue that prevented the set bonus search feature from working with
+;   the ability-altering weapon sets
+; * Fixed an issue where the Twin Sisters set was appearing with the incorrect
+;   style
+;
+; Version 1.1.6 (2017/09/19)
+; * Added support for Update 16 (Clockwork City)
+;
+; Version 1.1.5 (2017/07/11)
+; * Added support for Update 15 (Horns of the Reach)
+;
+; Version 1.1.4 (2017/05/22)
+; * Added support for Update 14 (Morrowind)
+;
+; Version 1.1.3 (2016/11/02)
+; * Added Japanese translation (thank you, BowmoreLover)
+;
+; Version 1.1.2 (2016/10/25)
+; * Added Spanish translation (thank you, Kwisatz)
+; * Minor update of the German and Russian translations
+; * Addressed issue where users of the recently-updated CraftStore add-on were
+;   being shown duplicated style information in Itemization Browser's tooltips
+;
+; Version 1.1.1 (2016/10/17)
+; * Added new options to the category filters: Bind On Equip and Bind On Pickup
+; * Added a counter to the lower right corner showing the number of entries
+;   matching the current filter/search
+;
+; Version 1.1.0 (2016/10/16)
+; * Added a new feature for searching set bonuses
+;
+; Version 1.0.1 (2016/10/06)
+; * Added Russian translation (thank you, Ckau)
+; * For monster sets, the Source column now includes the name of the Undaunted
+;   chest containing the shoulders for that set
+; * Removed Thieves Troves as sources; it appears that they were changed in
+;   Update 12 to now drop sets belonging to the zone that they are in
+;
+; Version 1.0.0 (2016/10/05)
+; * Added French translation (thank you, Llwydd)
+; * Added German translation (thank you, Baertram)
+; * General release for Update 12 (One Tamriel)
+;
+; Version 0.2.3 (2016/09/22)
+; * The number of traits needed for a crafted set will now be shown in the Type
+;   column instead of the Source column
+; * Thieves Troves are now listed as sources for some item sets
+;
+; Version 0.2.2 (2016/09/19)
+; * Data initialization will now happen only if the add-on is invoked, in order
+;   to minimize unnecessary processing
+;
+; Version 0.2.1 (2016/09/15)
+; * The item tooltip shown when mousing over a set will now report the style
+;   of that set, if applicable
+; * Added the six 3-piece jewelry sets found in Cyrodiil, which had been
+;   previously omitted due to an oversight
+;
+; Version 0.2.0 (2016/09/15)
+; * Added a dropdown filter to narrow results by source categories
+; * Crafted sets will now list the zone(s) in which the set can be crafted
+; * Swapped the Greenshade and Grahtwood sets to correct an apparent error in
+;   the PTS patch notes
+;
+; Version 0.1.1 (2016/09/15)
+; * Fixed various formatting issues for non-English locales
+;
+; Version 0.1.0 (2016/09/14)
+; * Initial pre-release version

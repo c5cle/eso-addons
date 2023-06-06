@@ -1,0 +1,32 @@
+<GuiXml>
+    <!-- Optional backup font settings for French language mode. "fr" -->
+    <!-- These backup fonts will be used in place of the missing glyphs in the original font -->
+    <BackupFont originalFont="$(PROSE_ANTIQUE_FONT)" backupFont="EsoUI/Common/Fonts/ProseAntiquePSMTCyrillic.otf"/>
+    <BackupFont originalFont="$(PROSE_ANTIQUE_FONT)" backupFont="EsoUI/Common/Fonts/ESO_KafuPenji-M.ttf"/>
+
+    <BackupFont originalFont="$(CONSOLAS_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf"/>
+
+    <BackupFont originalFont="$(FTN47_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf"/>
+
+    <BackupFont originalFont="$(FTN57_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf"/>
+
+    <BackupFont originalFont="$(FTN87_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf"/>
+
+    <BackupFont originalFont="$(HANDWRITTEN_BOLD_FONT)" backupFont="EsoUI/Common/Fonts/HandwrittenCyrillic_Bold.ttf"/>
+    <BackupFont originalFont="$(HANDWRITTEN_BOLD_FONT)" backupFont="EsoUI/Common/Fonts/ESO_KafuPenji-M.ttf"/>
+
+    <BackupFont originalFont="$(TRAJAN_PRO_R_FONT)" backupFont="EsoUI/Common/Fonts/TrajanProCyrillic-Regular.otf"/>
+    <BackupFont originalFont="$(TRAJAN_PRO_R_FONT)" backupFont="EsoUI/Common/Fonts/ESO_KafuPenji-M.ttf"/>
+
+    <BackupFont originalFont="$(UNIVERS55_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf"/>
+
+    <BackupFont originalFont="$(UNIVERS57_FONT)" backupFont="EsoUI/Common/Fonts/Univers57Cyrillic-Condensed.otf"/>
+    <BackupFont originalFont="$(UNIVERS57_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWUDC_70-M.ttf"/>
+
+    <BackupFont originalFont="$(UNIVERS67_FONT)" backupFont="EsoUI/Common/Fonts/Univers67Cyrillic-CondensedBold.otf"/>
+    <BackupFont originalFont="$(UNIVERS67_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf"/>
+
+    <BackupFont originalFont="$(UNIVERS57CYR_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWUDC_70-M.ttf"/>
+
+    <BackupFont originalFont="$(UNIVERS67CYR_FONT)" backupFont="EsoUI/Common/Fonts/ESO_FWNTLGUDC70-DB.ttf"/>
+</GuiXml>

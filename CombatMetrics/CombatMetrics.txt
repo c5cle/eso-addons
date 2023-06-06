@@ -1,0 +1,27 @@
+﻿## Title: |c00ff00[必装]-CombatMetrics(DPS统计)|r
+## APIVersion: 101036 101037
+## Author: Solinur
+## Version: 1.5.14
+## AddOnVersion: 10514
+## DependsOn: CombatMetricsFightData LibCombat>=67 LibAddonMenu-2.0>=34 LibCustomMenu>=713
+## OptionalDependsOn: LibDebugLogger
+## SavedVariables: CombatMetrics_Save
+## Description: CombatMetrics is a tool to analyse your performance in fights.
+
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates.
+; The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc.
+; in the United States and/or other countries. All rights reserved.
+;
+; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+lang/en.lua
+lang/$(language).lua
+
+CombatMetrics.lua
+CombatMetricsMenu.lua
+CombatMetricsLegacy.lua
+CombatMetricsUI.lua
+Customisations.lua
+
+bindings.xml
+CombatMetrics.xml

@@ -1,0 +1,17 @@
+## Title: LibSkillsFactory (|c00FFFFv15|r)
+## Author: Ayantir, Armodeniz
+## Contributors: Sigodest
+## APIVersion: 101031
+## AddOnVersion: 15
+## Version: 15
+## IsLibrary: true
+
+## Description: LibSkillsFactory is a library for SuperStar designed to interface with skill information in order to create an in-game skill builder.
+
+## This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates.
+## The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries.
+## All rights reserved
+##
+## You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+LibSkillsFactory.lua

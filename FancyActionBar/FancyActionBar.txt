@@ -1,0 +1,13 @@
+## Title: |c00bfff[增强]-FancyActionBar(双排技能栏显示)|r
+## Version: 2.7
+## APIVersion: 101034
+## AddOnVersion: 207
+## Author: |cFFFF00andy.s|r
+## SavedVariables: FancyActionBarSV
+## DependsOn: LibAddonMenu-2.0>=34
+## OptionalDependsOn: Azurah
+
+main.lua
+config.lua
+menu.lua
+ui.xml

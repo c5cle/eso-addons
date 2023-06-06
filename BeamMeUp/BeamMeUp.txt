@@ -1,0 +1,34 @@
+## Title: |c00bfff[增强]-BeamMeUp(快速旅行传送器)|r
+## Description: Free fast travel to available players from your friend list, guilds and group.
+## Author: DeadSoon, Gamer1986PAN
+## APIVersion: 101037 101038
+## SavedVariables: BeamMeUp_SV
+## Version: 3.4.5
+## AddOnVersion: 345
+## IsLibrary: false
+## DependsOn: LibAddonMenu-2.0 LibCustomMenu LibSlashCommander LibZone
+## OptionalDependsOn: BanditsUserInterface PortToFriendsHouse MorrowindStyleUI LibSets LibMapPing
+
+
+## Globals / data sets
+GuildData.lua
+TeleporterGlobals.lua
+
+
+## Core
+core/SI.lua
+localization/EN.lua
+localization/$(language).lua
+
+core/List.lua
+core/TeleAppUI.lua
+core/TeleSlashCommands.lua
+core/TeleporterChecker.lua
+
+
+## Bindings
+bindings/bindings.lua
+bindings/bindings.xml
+
+
+BeamMeUp.lua

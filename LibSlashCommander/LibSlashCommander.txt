@@ -1,0 +1,24 @@
+## Title: LibSlashCommander
+## Author: sirinsidiator
+## Version: 1.1.0
+## APIVersion: 100034 100035 100036 100037 100038 100039
+## AddOnVersion: 36
+## IsLibrary: true
+## OptionalDependsOn: LibStub
+##
+## This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. 
+## The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. 
+## All rights reserved
+##
+## You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+LibSlashCommander.lua
+util.lua
+providers/AutoCompleteProvider.lua
+providers/AutoCompleteSlashCommandsProvider.lua
+providers/AutoCompleteSubCommandsProvider.lua
+descriptions/en.lua
+descriptions/$(language).lua
+descriptions/types.lua
+Command.lua
+init.lua

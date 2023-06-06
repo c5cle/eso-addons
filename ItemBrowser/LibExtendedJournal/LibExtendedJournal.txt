@@ -1,0 +1,70 @@
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax Media
+; Inc. or its affiliates. The Elder Scrolls and related logos are registered
+; trademarks or trademarks of ZeniMax Media Inc. in the United States and/or
+; other countries. All rights reserved.
+; https://account.elderscrollsonline.com/add-on-terms
+
+## Title: LibExtendedJournal
+## Description: Common framework for addons that provide a UI similar to the in-game journal
+## Author: @code65536
+## IsLibrary: true
+## Version: 1.3.5
+## AddOnVersion: 14
+## APIVersion: 101037 101038
+
+l10n/default.lua
+l10n/$(language).lua
+
+Controls.xml
+Internal.lua
+Public.lua
+SortFilterList.lua
+Bindings.xml
+
+; Changelog:
+;
+; Version 1.3.5 (2023/05/01)
+; * API version bump for Update 38 (Necrom)
+;
+; Version 1.3.4 (2023/02/13)
+; * API version bump for Update 37 (Scribes of Fate)
+;
+; Version 1.3.3 (2022/09/23)
+; * API version bump for Update 36 (Firesong)
+;
+; Version 1.3.2 (2022/07/28)
+; * API version bump for Update 35 (Lost Depths)
+;
+; Version 1.3.1 (2022/04/19)
+; * API version bump for Update 34 (High Isle)
+;
+; Version 1.3.0 (2022/03/08)
+; * Added InitializeComboBox to ExtendedJournalSortFilterList
+;
+; Version 1.2.0 (2022/02/17)
+; * Added InitializeSearch to ExtendedJournalSortFilterList
+; * API version bump for Update 33 (Ascending Tide)
+;
+; Version 1.1.6 (2021/09/28)
+; * API version bump for Update 32 (The Deadlands)
+;
+; Version 1.1.5 (2021/07/14)
+; * API version bump for Update 31 (Waking Flame)
+;
+; Version 1.1.4 (2021/06/21)
+; * Added SelectComboBoxItemByIndex to select items with bounds-checking
+;
+; Version 1.1.3 (2021/05/27)
+; * Switched to ZO_ScrollList_GetData for list row data acquisition
+;
+; Version 1.1.2 (2021/05/12)
+; * Added support for collectible and antiquity tooltips
+;
+; Version 1.1.1 (2021/04/20)
+; * API version bump for Update 30 (Blackwood)
+;
+; Version 1.1.0 (2021/02/28)
+; * Added functions to support context menus and custom tooltip extensions
+;
+; Version 1.0.0 (2021/02/25)
+; * Initial version

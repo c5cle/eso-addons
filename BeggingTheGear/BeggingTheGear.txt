@@ -1,0 +1,26 @@
+## Title: |c00bfff[增强]-BeggingTheGear(战利品搜寻)|r
+## APIVersion: 101036
+## Version: 2.3.2
+## Author: oJelly, SilverWF
+## Description: This addon allows you to seek specified keywords in the your or your group(raid)mates loot
+## SavedVariables: BTG_savedata
+## DependsOn: LibAddonMenu-2.0>=28
+##
+##
+## This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. 
+## The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. 
+## All rights reserved
+##
+## You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+##
+## thanks for all the help by
+## @manavortex @Ayantir @Baertram @Solinur @sirinsidiator @AbyssVanos
+## @Rhyono @SilverWF
+## AwesomeGuildStore IIfA AlphaGear
+## 
+
+BeggingTheGear.lua
+ListGear.lua
+ListDaddy.lua
+BeggingTheGear.xml
+Bindings.xml

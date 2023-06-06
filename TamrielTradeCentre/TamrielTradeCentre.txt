@@ -1,0 +1,22 @@
+## APIVersion: 101037
+## Title: |c00bfff[增强]-TamrielTradeCentre(TTC物品价格显示)|r
+## Description: Addon for TamrielTradeCentre.com
+## Version: 4.10.146.18293
+## Author: TamrielTradeCentre.com
+## DependsOn: LibAddonMenu-2.0>=31 LibCustomMenu>=721
+## SavedVariables: TamrielTradeCentreVars
+## OptionalDependsOn: AwesomeGuildStore
+
+lang\en.lua
+lang\common.lua
+lang\$(language).lua
+TamrielTradeCentreInit.lua
+SettingMenu.lua
+SavedVarUpgrader.lua
+PriceTable.lua
+PriceTableNA.lua
+PriceTableEU.lua
+ItemLookUpTable_$(language).lua
+TamrielTradeCentre.lua
+TamrielTradeCentrePrice.lua
+bindings.xml

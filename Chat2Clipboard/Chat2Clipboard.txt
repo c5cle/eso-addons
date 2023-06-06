@@ -1,0 +1,18 @@
+## Title: |c00bfff[增强]-Chat2Clipboard(复制聊天框内容)|r
+## Author: sirinsidiator & |cEFEBBEGarkin|r
+## Version: 1.12.1
+## APIVersion: 101035 101036
+## AddOnVersion: 22
+## DependsOn: LibCustomMenu>=680
+## SavedVariables: Chat2Clipboard_SavedVariables
+##
+## This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. 
+## The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries. 
+## All rights reserved
+##
+## You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+Textbox.xml
+StartUp.lua
+CircularBuffer.lua
+; RavenVersion: 20221207225700

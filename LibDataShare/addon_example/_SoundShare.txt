@@ -1,0 +1,8 @@
+## Title: SoundShare
+## Version: 0.2
+## APIVersion: 101035 101034
+## AddOnVersion: 2
+## Author: original |cFFFF00andy.s|r - maintained by m00nyONE
+## DependsOn: LibDataShare>=1
+
+SoundShare.lua

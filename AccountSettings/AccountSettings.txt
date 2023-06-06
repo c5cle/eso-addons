@@ -1,0 +1,10 @@
+## Title: |cffdead[可选]-AccountSettings(同步全部角色设置)|r
+## Description: Automatic settings
+## Author: Jodynn, |c3CB371@Masteroshi430|r
+## Version: 2023.06.05
+## APIVersion: 101038
+## SavedVariables: AccountSettings_SV
+## DependsOn: LibAddonMenu-2.0>=28
+
+AccountSettings.xml
+AccountSettings.lua

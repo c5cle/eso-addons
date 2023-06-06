@@ -1,0 +1,25 @@
+## Title: |c00bfff[增强]-MuchSmarterAutoLoot(自动拾取筛选)|r
+## Author: |c215895L|c3E6284y|c5A6B73k|c777562e|c937F51i|cB08840o|cCC922Fn|r
+## Description: An AutoLoot manager makes your looting more comfortable. Inspired by Agathorn's Smarter AutoLoot.
+## APIVersion: 101038
+## Version: 2.10.2
+## SavedVariables: MSAL_VARS
+## DependsOn: LibAddonMenu-2.0>=33
+## OptionalDependsOn: LibSavedVars
+
+
+i18n/en.lua
+i18n/$(language).lua
+MuchSmarterAutoLootSettings.lua
+MuchSmarterAutoLoot.lua
+MuchSmarterAutoLoot.xml
+
+; DISCLAIMER:
+;
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United
+; States and/or other countries. All rights reserved.
+;
+; You can read the full terms at:
+; https://account.elderscrollsonline.com/add-on-terms

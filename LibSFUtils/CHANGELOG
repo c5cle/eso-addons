@@ -1,0 +1,265 @@
+[COLOR="DeepSkyBlue"]45[/COLOR]:
+[LIST]
+[*] Added a "safe" wrapper function [COLOR="MediumSeaGreen"]LibSFUtils.safeClearTable(tbl)[/COLOR] for ZO_ClearTable(tbl) to ensure that it still works if nil is passed in as the table tbl. For a nil tbl, it will return an empty table {}.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]44[/COLOR]:
+[LIST]
+[*] Added convenience color for ThiefTools to use.
+[*] API bump (Necrom).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]43[/COLOR]:
+[LIST]
+[*] API bump (Scribes of Fate).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]42[/COLOR]:
+[LIST]
+[*] Added convenience convert seconds to HH:MM:SS string function [COLOR="MediumSeaGreen"]LibSFUtils.secondsToClock(seconds)[/COLOR]
+[/LIST]
+
+[COLOR="DeepSkyBlue"]41[/COLOR]:
+[LIST]
+[*] API bump (High Isle).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]40[/COLOR]
+[LIST]
+[*] API bump.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]39[/COLOR]
+[LIST]
+[*] Fix lua error reported for rChat with wierd characters in the chat message.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]38[/COLOR]
+[LIST]
+[*] Splitting out existing colorizing functions to SFUtils_Color. Addition of new SF_Color object (interoperable with ZO_ColorDef).
+[*] Version number 37 skipped because, oops?
+[/LIST]
+
+[COLOR="DeepSkyBlue"]36[/COLOR]
+[LIST]
+[*] API bump.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]35[/COLOR]
+[LIST]
+[*] Add in some simple MsgWindow enhancement functions (creates dependency on LibMsgWindow when used).
+[*] Fix some errors in the addon info functions
+[/LIST]
+
+[COLOR="DeepSkyBlue"]34[/COLOR]
+[LIST]
+[*] Fixed error reported by Damolann.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]33[/COLOR]
+[LIST]
+[*] API bump (Flames of Ambition).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]32[/COLOR]
+[LIST]
+[*] Split the Sounds-related functions into a separate source file for ease of maintenance. They are still part of the LibSFUtils library so no changes from a use standpoint.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]31[/COLOR]
+[LIST]
+[*] API bump (Blackwood).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]30[/COLOR]
+[LIST]
+[*] API bump (Flames of Ambition).
+[*] Added some convenience guild functions.
+[COLOR="MediumSeaGreen"]LibSFUtils.SafeGetGuildName(index)[/COLOR]
+   Given an index between 1 and 5, get a guild name for that index and return both the guild name and the guild id for that index. Guild name is guaranteed to be non-nil, but if there was an error then the guild id returns IS nil.
+[COLOR="MediumSeaGreen"]LibSFUtils.GetActiveGuildNames()[/COLOR]
+   Get a list of names of active guilds in order by guild index (1-5)
+[COLOR="MediumSeaGreen"]LibSFUtils.GetActiveGuildIds()[/COLOR]
+   Get a list of ids of active guilds in order by guild index (1-5)
+The GetActiveGuildNames() and GetActiveGuildIds() can be used as a pair to set the choices and choicesValues fields respectively of a dropdown menu so that you see guild names but actually deal with guild ids.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]29[/COLOR]
+[LIST]
+[*] Added some more color conversion functions hex->RGBA & RGB->hex. While the original [COLOR="MediumSeaGreen"]LibSFUtils.colorHexToRGBA(colourString)[/COLOR] is still available, the new [COLOR="MediumSeaGreen"]LibSFUtils.ConvertHexToRGBA(colourString)[/COLOR] is recommended because it can convert from rrggbb hex strings, |crrggbb hex color strings, and aarrggbb hex strings into r, g, b, a where as the original colorHexToRGBA() could only convert from rrggbb strings.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]28[/COLOR]
+[LIST]
+[*] API bump (Markarth).
+[*] Added some minor color conversion functions hex->RGBA & RGB->hex.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]27[/COLOR]
+[LIST]
+[*] API bump.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]26[/COLOR]
+[LIST]
+[*] Fixed a chat message issue caused by the previous minor code cleanup. Oops.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]25[/COLOR]
+[LIST]
+[*] Minor code cleanup.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]24[/COLOR]
+[LIST]
+[*] API bump, preparing for Greymoor.
+[*] Added a couple of new convenience colors.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]23[/COLOR]
+[LIST]
+[*] Added new functions for checking the versions of loaded libraries. These functions will work in conjunction with LibDebugLogger (or some other logger) to print messages to the specified logger if a library is either not loaded or does not meet the minimum version requirement for the library to be used with an addon. See ReadMe for more details.
+[*] Split related functions into separate source files for convenience. There are no changes to the API or functionality in doing so - only in making the code easier to inspect and change.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]22[/COLOR]
+[LIST]
+[*] Some new functions for delimited string splitting and color marker stripping or correction.
+[COLOR="MediumSeaGreen"]LibSFUtils.gsplit(str, pat)[/COLOR]
+   Split a string into sections using a pattern as a delimiter
+   When delimiter starts or ends the string, an empty string is considered
+   to be before/after the delimiter. When two or more delimiters are together,
+   there is considered to be empty strings between them.
+   Returns table of strings that were separated by delimiters
+   (The delimiters are NOT included in the table.)
+
+[COLOR="MediumSeaGreen"]LibSFUtils.getAllColorDelim(str)[/COLOR]
+   Get the positions of all of the color markers (|c and |r) in a string
+   Return a table where each entry has the index into the string (start)
+   and the type of marker (code = "c" or "r", lower case)
+   Havok allows "|" escape character for "|" (user input) so we must handle doubled pipes for chat.
+   Returns the markertable for the markers that are in the string
+     (can be empty but never nil)
+
+[COLOR="MediumSeaGreen"]LibSFUtils.regularizeColors(markertable, str)[/COLOR]
+   Evaluate and correct the color markers in the string so that
+   empty colors are marked for removal, "|c" markers are 
+   always balanced by "|r" markers, and we don't have extra "|r"
+   markers
+   Uses the source string and a marker table as produced by 
+   getAllColorDelim(). The marker table is modified by this function.
+   Returns the modified markertable for the markers that are in (or should be in) the string
+
+[COLOR="MediumSeaGreen"]LibSFUtils.stripColors(markertable,str)[/COLOR]
+   Strip all of the color markers out of the string.
+   Uses the source string and a marker table as produced by 
+   getAllColorDelim().
+   Returns a string which is the source string with all of the color
+   markers removed.
+
+[COLOR="MediumSeaGreen"]LibSFUtils.colorsplit(markertable, str)[/COLOR]
+   Splits the string into sections corresponding the color markers themselves
+   and the text around the markers. Doing a table.concat() will join the contents
+   of the returned table into a properly color-marked string.
+   Returns the table of sections
+[/LIST]
+
+[COLOR="DeepSkyBlue"]21[/COLOR]
+[LIST]
+[*] Added a LibSFUtils.LibVersion variable which contains the current version number of the library. This can be used by addons that depend on this library to ensure that a minimum version of the library is loaded and accessible.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]20[/COLOR]
+[LIST]
+[*] Added functions supporting an array of sounds since I now have more than one addon doing it.
+[*] Update defaultMissing() to properly check for a nil value and return the default if found.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]19[/COLOR]
+[LIST]
+[*] API bump
+[/LIST]
+
+[COLOR="DeepSkyBlue"]18[/COLOR]
+[LIST]
+[*] API bump
+[/LIST]
+
+[COLOR="DeepSkyBlue"]17[/COLOR]
+[LIST]
+[*] More adjustments to the LibSFUtil enhanced version of SafeAddString() to support the LoadLanguage() function.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]16[/COLOR]
+[LIST]
+[*] Modified and tested the LibSFUtil enhanced version of SafeAddString() to support the LoadLanguage() function.
+[*] Fixed error in loading of default language strings in LoadLanguage().
+[/LIST]
+
+[COLOR="DeepSkyBlue"]15[/COLOR]
+[LIST]
+[*] Removed dependency on LibStub. This library can no longer be accessed through LibStub.
+[*] Added new ##IsLibrary to manifest.
+[*] Added new Localization function LoadLanguage().
+
+function sfutil.LoadLanguage(localization_strings, defaultLang)
+    Add strings to the string table for the client language (or
+    the default language if the client language did not have strings
+    defined for it). The localization_strings parameter is a table of tables
+    of localization strings, and defaultLang defaults to "en" if not
+    provided.
+    
+    An example of a localization_strings table might be:
+    
+    MyAddon.localization_strings = {
+    ["en"] = {
+            MYADDON_RANDOM_TEXT = "This is a test",
+        },
+    ["de"] = {
+            MYADDON_RANDOM_TEXT = "Dies ist ein Test",
+        },
+    ["fr"] = {
+            MYADDON_RANDOM_TEXT = "C'est un test",
+        },
+    }
+    
+    Then the sfutil.LoadLanguage(MyAddon.localization_strings, "en") would load
+    the appropriate strings table for the client language, or the "en" strings
+    if there isn't a table for the language (say it was "jp").
+[*] Added a deep copy function for a table - deepCopy(orig) returns new table.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]14[/COLOR]
+[LIST]
+[*] API Bump
+[/LIST]
+
+[COLOR="DeepSkyBlue"]13[/COLOR]
+[LIST]
+[*] Hybridize library to provide both LibStub access for addons still using it while providing direct access for addons that have transitioned away from using LibStub. The LibSFUtils library will still depend on LibStub to provide backwards compatibility until LibStub support/access is discontinued (basically when I've converted all of my addons to the new paradigm).
+    While LibStub access is still supported, users of it typically have something like
+    [CODE]local SF = LibStub("LibSFUtils")[/CODE]
+    New users of the library should not do this however. Instead, you should use the direct access method such as 
+    [CODE]local SF = LibSFUtils[/CODE]
+    Current addons using this library should convert their LibStub("LibSFUtils") to the second version of this line (to minimize the amount of changes required to their own code).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]12[/COLOR]
+[LIST]
+[*] First release as a standalone library.
+[*] Added the slashHelp() function to addonChatter. This will allow you to pass in a table of slash commands and descriptions and have them printed to chat with colorization and the [...] addon prefix.
+    For example, chatter:slashHelp("my title", { { "/xx.init", "Reinitialize"}, {"/xx cute", "Display cute remark"} } )
+    Will display
+        [myaddon] my title
+        [myaddon] /xx.init   = Reinitialize
+        [myaddon] /xx cute   = Display cute remark
+    in the chat window.
+[*] [COLOR="Red"]Breaking change[/COLOR] Removed sfutil.copy() - deep table copy as ZO_DeepTableCopy(source, dest) can be used instead.
+[*] Wrote documentation.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]11[/COLOR]
+[LIST]
+[*] Beta as an standalone library.
+[/LIST]
+

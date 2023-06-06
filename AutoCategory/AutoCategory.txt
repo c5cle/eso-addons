@@ -1,0 +1,36 @@
+## Title: |c00bfff[增强]-AutoCategory(背包分类)|r
+## APIVersion: 101038 101037
+## Author: Shadowfen, crafty35a, RockingDice, Friday_the13_rus
+## Description: Inventory categorization. Type "/ac" for settings
+## Version: 3.6.3
+## AddOnVersion: 90
+## SavedVariables: AutoCategorySavedVars AutoCatRules
+## DependsOn: LibAddonMenu-2.0>=32 LibSFUtils>=45 LibMediaProvider-1.0 LibDebugLogger
+## OptionalDependsOn: GearChangerByIakoni FCOItemSaver QuickMenu ItemSaver ItemMarker UnknownTracker MasterMerchant TamrielTradeCentre SetTrack CharacterKnowledge
+
+lang/strings.lua
+lang/$(language).lua
+
+AutoCategory_Global.lua
+AutoCategory_Defaults.lua
+Plugin_API.lua
+AutoCategory.xml
+Hooks_Keyboard.lua
+Hooks_Gamepad.lua
+AutoCategory.lua
+AddonMenu.lua
+AutoCategory_RuleFunc.lua
+AutoCategory_API.lua
+Misc_Plugins.lua
+
+; new style addon plugin files
+ItemMarker_Plugin.lua
+ItemSaver_Plugin.lua
+FCOIS_Plugin.lua
+Iakoni_GearChanger_Plugin.lua
+UnknownTracker_Plugin.lua
+
+; old integration with other addons files
+AutoCategory_Integrations_QuickMenu.lua
+
+Bindings.xml

@@ -1,0 +1,47 @@
+## Title: |c00bfff[增强]-RaidNotifier(操作提示)|r
+## Description: Displays on-screen notifications on different events during trials.
+## Author: |c009ad6Kyoma, Memus, Woeler, silentgecko|r
+## Version: 2.24.1
+## APIVersion: 101036
+## SavedVariables: RNVars RN_DEBUG_LOG
+## DependsOn: LibAddonMenu-2.0>=28 LibUnits2
+## OptionalDependsOn: LibGroupSocket
+
+libs/LibStub/LibStub.lua
+libs/LibCustomTitles/LibTitleLocale.lua
+libs/LibCustomTitles/LibCustomTitles.lua
+libs/LibCustomTitles/Titles/Kyoma.lua
+libs/LibCustomTitles/Titles/Woeler.lua
+libs/LibCustomTitles/Titles/Valve.lua
+libs/LibCustomTitles/Titles/Memus.lua
+
+libs/LibCSA/LibCSA.lua
+
+UltimateHandler.lua
+TrialAetherianArchive.lua
+TrialAsylumSanctorium.lua
+TrialDragonStarArena.lua
+TrialHallsOfFabrication.lua
+TrialHelRaCitadel.lua
+TrialMaelstormArena.lua
+TrialMawOfLorkhaj.lua
+TrialSanctumOphidia.lua
+TrialCloudrest.lua
+TrialSunspire.lua
+TrialKynesAegis.lua
+TrialRockgrove.lua
+TrialDreadsailReef.lua
+
+Notifications.lua
+RaidNotifier.lua
+Util.lua
+BuffsDebuffs.lua
+Settings.lua
+UI.lua
+DelayedEventHandler.lua
+
+RaidNotifier.xml
+Bindings.xml
+
+lang/en.lua
+lang/$(language).lua

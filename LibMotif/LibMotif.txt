@@ -1,0 +1,24 @@
+## Title: LibMotif 7.3.1
+## Version: 7.3.1
+## AddOnVersion: 070301
+## Last Updated: 2022-03-15
+## APIVersion: 101033
+## IsLibrary: true
+## Description: Provide data about motifs that is not easily available via ESO API.
+## Author: ziggr
+## DependsOn: LibCharacterKnowledge
+
+            # LibCharacterKnowledge
+            #   by 65536
+            #   https://www.esoui.com/downloads/info3317-LibCharacterKnowledge.html
+            #   A newer library for checking character knowledge that
+            #   properly reads character-specific knowledge via lorebooks
+            #   instead of achievements, which are now account-wide.
+
+            # The actual data table calling code cares about.
+            # Leaving this file in case add-ons still use its
+            # constants.
+LibMotif_Data.lua
+
+
+LibMotif.lua

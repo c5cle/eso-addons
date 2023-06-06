@@ -1,0 +1,32 @@
+<GuiXml>
+    <!-- Optional backup font settings for Simplified Chinese language mode. "zh" -->
+    <!-- These backup fonts will be used in place of the missing glyphs in the original font -->
+    <BackupFont originalFont="$(PROSE_ANTIQUE_FONT)" backupFont="EsoUI/Common/Fonts/ProseAntiquePSMTCyrillic.otf"/>
+    <BackupFont originalFont="$(PROSE_ANTIQUE_FONT)" backupFont="EsoUI/Common/Fonts/MYoyoPRC-Medium.otf"/>
+
+    <BackupFont originalFont="$(CONSOLAS_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(FTN47_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(FTN57_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(FTN87_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(HANDWRITTEN_BOLD_FONT)" backupFont="EsoUI/Common/Fonts/HandwrittenCyrillic_Bold.ttf"/>
+    <BackupFont originalFont="$(HANDWRITTEN_BOLD_FONT)" backupFont="EsoUI/Common/Fonts/MYoyoPRC-Medium.otf"/>
+
+    <BackupFont originalFont="$(TRAJAN_PRO_R_FONT)" backupFont="EsoUI/Common/Fonts/TrajanProCyrillic-Regular.otf"/>
+    <BackupFont originalFont="$(TRAJAN_PRO_R_FONT)" backupFont="EsoUI/Common/Fonts/MYoyoPRC-Medium.otf"/>
+
+    <BackupFont originalFont="$(UNIVERS55_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(UNIVERS57_FONT)" backupFont="EsoUI/Common/Fonts/Univers57Cyrillic-Condensed.otf"/>
+    <BackupFont originalFont="$(UNIVERS57_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(UNIVERS67_FONT)" backupFont="EsoUI/Common/Fonts/Univers67Cyrillic-CondensedBold.otf"/>
+    <BackupFont originalFont="$(UNIVERS67_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(UNIVERS57CYR_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+
+    <BackupFont originalFont="$(UNIVERS67CYR_FONT)" backupFont="EsoUI/Common/Fonts/MYingHeiPRC-W5.otf"/>
+</GuiXml>

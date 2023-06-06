@@ -1,0 +1,16 @@
+<GuiXml>
+    <Controls>
+
+        <!-- Save Chat Settings -->
+
+        <Button name="AccountSettings_SaveChat_Button" topmost="true">
+            <Anchor relativeTo="ZO_ChatWindowOptions" relativePoint="TOPLEFT" point="TOPLEFT" offsetX="-32"/>
+            <Dimensions y="32" x="32"/>
+            <OnInitialized>self:SetParent(ZO_ChatWindowOptions)</OnInitialized>
+            <Textures normal="esoui/art/buttons/edit_save_up.dds"
+                      mouseOver="esoui/art/buttons/edit_save_over.dds"
+                      disabled="esoui/art/buttons/edit_save_disabled.dds"/>
+        </Button>
+
+    </Controls>
+</GuiXml>

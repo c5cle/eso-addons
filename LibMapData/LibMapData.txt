@@ -1,0 +1,18 @@
+## Title: LibMapData
+## Author: Sharlikran
+## Version: 1.11
+## AddOnVersion: 111
+## IsLibrary: true
+## APIVersion: 101037 101038
+## SavedVariables: LibMapData_SavedVariables
+## DependsOn: LibGPS>=68
+## OptionalDependsOn: LibDebugLogger>=220 DebugLogViewer>=558
+
+## This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates.
+## The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries.
+## All rights reserved.
+##
+## You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+LibMapData.lua
+LibMapData_Data.lua

@@ -1,0 +1,15 @@
+﻿## Title: LibTableFunctions-1.0
+## APIVersion: 100034 100035 100036 100037 100038 100039
+## Author: Urich/Onigar
+## Version: 1.0.1
+## AddOnVersion: 101
+## IsLibrary: true
+## Description: a small collection of functions aimed at simplifying table operations.
+
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax Media Inc. or its affiliates. 
+; The Elder Scrolls® and related logos are registered trademarks or trademarks of ZeniMax Media Inc. in the United States and/or other countries.
+; All rights reserved.
+; 
+; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+LibTableFunctions-1.0.lua

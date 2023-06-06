@@ -1,0 +1,12 @@
+## APIVersion: 101035 101036
+## Version: 1.2.16
+## Title: |c00bfff[增强]-GridList(背包网格布局)|r
+## Author: @KL1SK
+## Description:
+## SavedVariables: GridList_SV
+
+## OptionalDependsOn: AutoCategory PerfectPixel LibAddonMenu-2.0
+
+Init.lua
+
+GridList.lua

@@ -1,0 +1,34 @@
+## Title: |c00bfff[增强]-AlphaGear(一键换装)|r
+## APIVersion: 100034 100035 100036 100037 100038 100039
+## Version: 1.0.0
+## SavedVariables: AGX2_Account
+## SavedVariables: AGX2_Character
+## Author: sir-celsius
+## Description: Anything you need to manage your builds. Configurable profiles, builds, skill and gear sets, auto repair and auto weapon charge, deposit and withdraw function. Originally by AlphaLemming and mesota.
+## DependsOn: LibAddonMenu-2.0
+## OptionalDependsOn: LibStub LibZone FCOItemSaver ChampionPointsSlots
+## IsLibrary: false
+
+lang/en.lua
+lang/$(language).lua
+
+AGSkills17.lua
+
+AlphaGear.lua
+
+plugins/FCOIS/ag_fcois.lua
+
+plugins/AlphaStyle/ag_as.lua
+
+plugins/CPSlots/ag_cpslots.lua
+
+AlphaGearSettings.lua
+
+dialogs/AG_EditProfileDialog.xml
+dialogs/AG_IntegrationsDialog.xml
+dialogs/AG_IntegrationsDialog.lua
+
+
+AlphaGear.xml
+
+Bindings.xml

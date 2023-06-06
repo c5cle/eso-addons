@@ -1,0 +1,15 @@
+## Title: |c00bfff[增强]-EnglishTooltips(中英名词显示工具)|r
+## Version: 1.7.1
+## AddOnVersion: 1.7.1
+## Author: Crunatus
+## APIVersion: 100034
+## Description: Display english names in tooltips if you play in the different language.
+## SavedVariables: EnglishTooltipsSavedVariables
+## DependsOn: LibAddonMenu-2.0>=30
+
+lang\strings.lua
+lang\$(language).lua
+
+EnglishTooltips.lua
+EnglishTooltipsMenu.lua
+EnglishTooltipsUtils.lua

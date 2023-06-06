@@ -1,0 +1,13 @@
+
+## Title: |c3CB371LibMarify|r
+## Author: |c3CB371@Marify|r
+## IsLibrary: true
+## APIVersion: 101036
+## Version: 1.2.17
+## AddOnVersion: 1217
+## IsLibrary: true
+
+
+LibMarify.lua
+
+

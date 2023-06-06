@@ -1,0 +1,15 @@
+<Bindings>
+  <Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
+    <Category name="|cFF9900BeggingTheGear|r">
+      <Action name="SHOW_BTGPanelView">
+        <Down>BTG.toggleBTGPanelView()</Down>
+      </Action>
+      <Action name="SHOW_BTGLootTipView">
+        <Down>BTG.toggleBTGLootTipView()</Down>
+      </Action>
+      <Action name="DEV_BTGReloadUi">
+        <Down>dev_reloadui()</Down>
+      </Action>
+    </Category>
+  </Layer>
+</Bindings>

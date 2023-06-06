@@ -1,0 +1,9 @@
+## APIVersion: 101034
+## Title: |c00bfff[增强]-SetLang(语言切换器)|r
+## Notes: add /l2{de, en, es,zh,ru} commands
+## AddOnVersion: 3
+## Version: 3.101034
+## Author: |cEFEBBEhatsune681|r
+## Description: 本插件可以让您用以下命令切换语言，/rezh切换到中文，/reen切换到英文 （输入后用光标选择此命令和/reloadui一样）
+
+SetLang.lua

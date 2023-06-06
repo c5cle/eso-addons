@@ -1,0 +1,15 @@
+<GuiXml>
+    <!-- common font string defintions for all language modes. -->
+    <String name="PROSE_ANTIQUE_FONT" value="esoui/common/fontS/ProseAntiquePSMT.otf" />
+    <String name="CONSOLAS_FONT" value="esoui/common/fontS/consola.ttf" />
+    <String name="FTN47_FONT" value="esoui/common/fontS/FTN47.otf" />
+    <String name="FTN57_FONT" value="esoui/common/fontS/FTN57.otf" />
+    <String name="FTN87_FONT" value="esoui/common/fontS/FTN87.otf" />
+    <String name="HANDWRITTEN_BOLD_FONT" value="esoui/common/fontS/Handwritten_Bold.otf" />
+    <String name="TRAJAN_PRO_R_FONT" value="esoui/common/fontS/TrajanPro-Regular.otf" />
+    <String name="UNIVERS55_FONT" value="esoui/common/fontS/Univers55.otf" />
+    <String name="UNIVERS57_FONT" value="esoui/common/fontS/Univers57.otf" />
+    <String name="UNIVERS67_FONT" value="esoui/common/fontS/Univers67.otf" />
+    <String name="UNIVERS57CYR_FONT" value="esoui/common/fontS/Univers57cyrillic-Condensed.otf" />
+    <String name="UNIVERS67CYR_FONT" value="esoui/common/fontS/Univers67cyrillic-CondensedBold.otf" />
+</GuiXml>

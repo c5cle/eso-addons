@@ -1,0 +1,18 @@
+## Title: |c00ff00[必装]-LMP_zhFontFI(插件中文字体)|r
+## Description: 添加中文字体到各插件选项中。
+## Version: 1.1.0
+## AddOnVersion: 10100
+## Author: AKira@shijian452
+## APIVersion: 101036
+## OptionalDependsOn: LibMediaProvider-1.0>=22 LibCFontManager>=10100
+
+; --------------------------------------------------------------------------------------------------------
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax 
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are 
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United 
+; States and/or other countries. All rights reserved.
+; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+fontstrings.xml
+LMP_zhFontFI.lua
+

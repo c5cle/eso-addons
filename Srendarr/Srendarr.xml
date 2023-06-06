@@ -1,0 +1,82 @@
+<GuiXml>
+	<Controls>
+		<TopLevelControl name="Srendarr" />
+		<TopLevelControl name="Srendarr_CastBar" hidden="true" clampedToScreen="true" />
+		<TopLevelControl name="Srendarr_GroupAuras" tier="HIGH" mouseEnabled="false" movable="false" clampedToScreen="true" hidden="false">
+			<Dimensions x="1" y="1"/>
+			<Anchor point="BOTTOMLEFT"/>
+		</TopLevelControl>
+
+<!--Defines the clickable list functionality. (Phinix)-->
+		<Control name="Srendarr_ListItemTemplate" virtual="true">
+			<Dimensions x="800" y="28"/>
+			<OnMouseEnter>
+				ZO_ScrollList_MouseEnter(Srendarr_RecentAuraListFrameList, self)
+			</OnMouseEnter>
+			<OnMouseExit>
+				ZO_ScrollList_MouseExit(Srendarr_RecentAuraListFrameList, self)
+			</OnMouseExit>
+			<OnMouseUp>
+				if(upInside) then
+					ZO_ScrollList_MouseClick(Srendarr_RecentAuraListFrameList, self)
+				end
+			</OnMouseUp>
+			<Controls>
+				<Label name="$(parent)Name" font="ZoFontGame" mouseEnabled="true">
+					<Dimensions x="260" y="24"/>
+					<Anchor point="TOPLEFT"/>
+					<OnMouseEnter>
+						Srendarr.XMLNavigation(01, self, self:GetText(), 1)
+					</OnMouseEnter>
+					<OnMouseExit>
+						Srendarr.XMLNavigation(01, self, self:GetText(), 2)
+					</OnMouseExit>
+					<OnMouseDown>
+						Srendarr.XMLNavigation(02, nil, self:GetText(), button)
+					</OnMouseDown>
+				</Label>
+			</Controls>
+		</Control>
+<!--Scroll list to display selected recent aura types. (Phinix)-->
+		<TopLevelControl name="Srendarr_RecentAuraListFrame" hidden="true">
+			<Dimensions x="280" y="276"/>
+			<Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" offsetX="373" offsetY="60"/>
+			<Controls>
+				<Backdrop name="$(parent)BG" inherits="ZO_DefaultBackdrop" alpha="0.9"/>
+				<Control name="$(parent)List" inherits="ZO_ScrollList">
+					<Dimensions x="280" y="276"/>
+					<Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT"/>
+					<Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="TOPRIGHT"/>
+					<Controls>
+					</Controls>
+				</Control>
+				<Label name="$(parent)ShowIDs" font="ZoFontWinH5" mouseEnabled="true">
+					<Dimensions x="340" y="24"/>
+					<Anchor point="BOTTOMLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" offsetX="4" offsetY="-4"/>
+					<OnMouseEnter>
+						Srendarr.XMLNavigation(03, self, self:GetText(), 1)
+					</OnMouseEnter>
+					<OnMouseExit>
+						Srendarr.XMLNavigation(03, self, self:GetText(), 2)
+					</OnMouseExit>
+					<OnMouseDown>
+						Srendarr.XMLNavigation(03, self, self:GetText(), 3)
+					</OnMouseDown>
+				</Label>
+				<Label name="$(parent)CurrentIDs" font="ZoFontWinH5" mouseEnabled="true">
+					<Dimensions x="340" y="24"/>
+					<Anchor point="BOTTOMLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" offsetX="4" offsetY="-4"/>
+					<OnMouseEnter>
+						Srendarr.XMLNavigation(03, self, self:GetText(), 1)
+					</OnMouseEnter>
+					<OnMouseExit>
+						Srendarr.XMLNavigation(03, self, self:GetText(), 2)
+					</OnMouseExit>
+					<OnMouseDown>
+						Srendarr.XMLNavigation(03, self, self:GetText(), 4)
+					</OnMouseDown>
+				</Label>
+			</Controls>
+		</TopLevelControl>
+	</Controls>
+</GuiXml>

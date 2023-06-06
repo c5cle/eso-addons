@@ -1,0 +1,43 @@
+## Title: |c00bfff[增强]-Srendarr(BUFF监控)|r
+## Description: Adds graphical tracking of buffs and debuffs on both yourself and others in a manner that meshes with the stock interface theme.
+## Version: 2.5.17
+## Author: |c66ccffPhinix|r, Kith, & |cEFEBBEGarkin
+## APIVersion: 101038
+## SavedVariables: SrendarrDB
+## DependsOn: LibMediaProvider-1.0>=13 LibAddonMenu-2.0>=30
+## OptionalDependsOn: FoundryTacticalCombat LuiExtended BanditsUserInterface AUI
+
+
+Srendarr.xml
+
+Locales\Local_en.lua
+Locales\Local_de.lua
+Locales\Local_fr.lua
+Locales\Local_ru.lua
+Locales\Local_es.lua
+Locales\Local_jp.lua
+
+Defaults.lua
+AuraData.lua
+
+Core.lua
+
+Aura.lua
+DisplayFrame.lua
+AuraControl.lua
+CastBar.lua
+Procs.lua
+
+Settings.lua
+bindings.xml
+
+
+; DISCLAIMER:
+;
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United
+; States and/or other countries. All rights reserved.
+;
+; You can read the full terms at:
+; https://account.elderscrollsonline.com/add-on-terms

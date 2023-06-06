@@ -1,0 +1,975 @@
+[COLOR="DeepSkyBlue"]3.6.3(90)[/COLOR]:
+[LIST]
+[*] Fixed "Collapse All" context menu option so that it collapses the categories in the inventory when selected. (Bug reported by ZoLatKam)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.6.2(89)[/COLOR]:
+[LIST]
+[*] Fixed addon settings so that you do not get a bunch of extra (possibly missing) categories listed in the Bag Settings categories drop down menu. This error was traced down to only occurring when you do not use Account-Wide - it added them anyway. (Reported most recently by Saint-Ange.)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.6.1(88)[/COLOR]:
+[LIST]
+[*] Removed debug message that was reporting "throwing away collapse status of ...". (Reported by Slane320). Sorry.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.6(87)[/COLOR]:
+[LIST]
+[*] Added an Appearance Setting for a new "Hidden Category Text Color" which allows you to choose what color that a category that was set as Hidden will be displayed as. This will make it readily apparent when you have turned Hidden ON for a category or for "ungrouped" which is where Others is listed as it will make the category name a different color from the non-hidden ones. (Hopefully, this will assist in telling the difference between addon bugs and unfortunate unintended settings.)
+[*] Modified the storage of collapsed categories in Saved Variables so that it takes up less space in the file.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.5.2(86)[/COLOR]:
+[LIST]
+[*] Possibly corrected a problem reported by Kiasmalyn regarding a UI error getting thrown in AddonMenu.lua.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.5.1(85)[/COLOR]:
+[LIST]
+[*] Corrected a problem with [COLOR="MediumSeaGreen"]cannotdecon()[/COLOR] that only affected players who do not have ESO+. For some reason, it just wasn't working properly.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.5(84)[/COLOR]:
+[LIST]
+[*] Increased the size of the rule definition edit box to 10 lines (up from 3).
+[*] New function [COLOR="MediumSeaGreen"]cannotdecon()[/COLOR]. This function will return true or false depending on if the item can be deconstructed or not. Examples of things that cannot be deconstructed are: jewelry acquired before the Summerset Chapter was released, companion gear, food, potions, etc. Obviously, this is most useful for a rule that picks out items to be deconstructed.
+[*] The function [COLOR="MediumSeaGreen"]isinquickslot()[/COLOR] has been fixed.
+[*] API bump for Necrom.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.3(82)[/COLOR]:
+[LIST]
+[*] Changed functions [COLOR="MediumSeaGreen"]ck_isunknown()[/COLOR] to work for characters in all accounts on the same computer for the current ESO server (NA, Europe, etc.). The [COLOR="MediumSeaGreen"]ck_isunknown()[/COLOR] and [COLOR="MediumSeaGreen"]ck_isunknowncat()[/COLOR] functions require you to have installed the [COLOR="DarkOrange"]LibCharacterKnowledge[/COLOR] addon by @code65536.
+[*] Increased the available range of priority numbers for rules to 1-1000. This does not change the already assigned rule priorities, but you now have room to spread out your rules. Just note that if you have hundreds of rules, your inventory/bank access will be SLOW!
+[/LIST]
+Added alternate names for several addon integration commands. Both the old and new commands are available and the new commands take the same parameters as the old ones:
+[LIST]
+* Old command [COLOR="MediumSeaGreen"]getpricemm()[/COLOR] - alternate command [COLOR="MediumSeaGreen"]mm_getprice()[/COLOR] - integration with MasterMerchant
+* Old command [COLOR="MediumSeaGreen"]getpricettc()[/COLOR] - alternate command [COLOR="MediumSeaGreen"]ttc_getprice()[/COLOR] - integration with Tamriel Trade Centre
+* Old command [COLOR="MediumSeaGreen"]getamountttc()[/COLOR] - alternate command [COLOR="MediumSeaGreen"]ttc_getamount()[/COLOR] - integration with Tamriel Trade Centre
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.2.3(81)[/COLOR]:
+[LIST]
+[*] API bump for Scribes of Fate.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.2.2(80)[/COLOR]:
+[LIST]
+[*] API bump for Firesong.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.2.1(79)[/COLOR]:
+[LIST]
+[*] Remove debug print statement that was accidentally left behind.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.2(78)[/COLOR]:
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]istag()[/COLOR] requested by BastionNtB. This function will allow you to match against one or more of the "Treasure Types" listed in the tooltip window for the item. This can help you to write rules to look for specific item types you need to acquire for some of the crow quests in Clockwork City.
+For instance, some of the Treasure Types you might see are:
+Artwork, Cosmetics, Dolls, Drinkware, Fishing Supplies, Games, Grooming Items, Musical Instruments, Oddities, Ritual Objects, Statues, Tools, Trifles and Ornaments, Wall Décor
+(If your client runs a language other than English you will see language-appropriate versions of the above.)
+You can create a rule to look for items that are games or dolls with the rule "istag('dolls','games')".
+The tags that you specify must exactly match the name of the tag type (except that upper-case is ignored). "grooming" will not match "grooming Items" because the second word is missing. Also, "Wall Decor" will not match "Wall Décor" (which has a UTF-8 character instead of a plain 'e').
+If you do not specify any tags to look for (just "istag()"), then the function will revert back to the [COLOR="MediumSeaGreen"]istreasure()[/COLOR] function's behaviour.
+[*] The additional companion jewelry traits "jewelry_quickened" and "jewelry_focused" have been added. The rest of the companion jewelry traits were already there.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1.7(77)[/COLOR]:
+[LIST]
+[*] Fixed error message during handling of damaged rules.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1.6(76)[/COLOR]:
+[LIST]
+[*] Repair a paste error in the French translations file.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1.5(75)[/COLOR]:
+[LIST]
+[*] New French translations for text in AutoCategory provided by XXXspartiateXXX. Note that you may need to delete your saved variables for AutoCategory in order for the new translations to be used inside your rules.
+[*] Fixed visibility so that when changing inventory sorting such as sort by status, name, value or even add-on sorting like quality sort add-on, collapsed categories are hidden, only revealed back when collapsing another category. (Reported by Anntauri)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1.4(74)[/COLOR]:
+[LIST]
+[*] Fix for a nil function call specific to using the Rag Picker.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1.3(73)[/COLOR]:
+[LIST]
+[*] Fix for the handling of craftstation rules (contributed by Kip).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1.2(72)[/COLOR]:
+[LIST]
+[*] Fixed broken isinquickslot() function so it works with the new quickslot system.
+[*] Fixed reported missing items when opening up a collapsed category.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1.1(71)[/COLOR]:
+[LIST]
+[*] Fixed a typo (as identified by Kyp).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.1(70)[/COLOR]:
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]armorybuild()[/COLOR]. (Contributed by MA3o.) This function that categorizes items based on the armory builds set up for the current character. It mimics the AlphaGear integration in behaviour, but instead of grouping items that belong to a AlphaGear set, it groups items that belong to an armory build.
+
+As an example, if you had an armory build called "Testing", the rule
+[CODE]
+armorybuild("Testing")
+[/CODE]
+will group items that are used in this armory build in a category called "-Category name- (Testing)".
+[*] Prevent categories that have been hidden (per the bag settings) from being displayed anyway.
+[*] Very minor speedup of most of the rule functions.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.0.4(69)[/COLOR]:
+[LIST]
+[*] Changed item count color to the same color as the rest of the category header. (Contributed by kueqvzzv.)
+[*] Prevent category headers with no items under them.
+[*] Code cleanup.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.0.3(68)[/COLOR]:
+[LIST]
+[*] Issue with the header collapse/uncollapse at the deconstruct stations and the Rag Picker is fixed. (Reported by IsharaMeradin, AlbertVonMoosseedorf, SamBF1991, and others)
+[*] Adding checking to gracefully complain about a rule that has an empty definition instead of just throwing an error. (reported by SerLoras)
+[*] Raised the minimum version for LibSFUtils that AutoCategory requires. (Thanks Saenic!)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.0.2(67)[/COLOR]:
+[LIST]
+[*] Fixed remaining issues with High Isle (at least on the PTS server since NA megaserver is still down).
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.0.1(66)[/COLOR]:
+[LIST]
+[*] Comment out the Quickslots hook that was changed in High Isle until I can take a look at it.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]3.0(65)[/COLOR]:
+[LIST]
+[*] Major rewrite of rule processing to enable speed ups for guild bank handling - heavily based on the code contributed by Bwadrochit -. Thank you!
+[*] The problem with stacksize() == 200 should be fixed.
+[*] The empty New category is no longer reproducable.
+[*] API bump (High Isle)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.37(64)[/COLOR]:
+[LIST]
+[*] Fix the category headers in Giladil's deconstruction list so that they will expand and contract properly.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.36(63)[/COLOR]:
+[LIST]
+[*] Add AutoCategory sorting to Giladil The Rag Picker's deconstruction screen.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.35(62)[/COLOR]:
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]isunknowncollectible()[/COLOR]. This function matches style pages, runeboxes and collectible fragments the user hasn't collected yet. Previously this was only possible with Unknown Tracker integration. Code provided by jkhsjdhjs.
+[*] API bump
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.34(61)[/COLOR]:
+[LIST]
+[*] Added "armor_invigorating" to the list of traittypes that you can check for. It is actually an alias for the already existing "armor_prosperous" which the game used to use as a different trait type. When Zenimax removed the "prosperous" trait type and introduced the "invigorating" one, they did not actually change the internal name from ITEM_TRAIT_TYPE_ARMOR_PROSPEROUS to something that more accurately expressed what it now represents.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.33(60)[/COLOR]:
+[LIST]
+[*] Fixed traittype("ornate") so that it will work again.
+[*] Added ability for the integration with UnknownTracker to tell us when Style Pages are unknown.
+[*] In addition to adding style pages to the UnknownTracker Plugin function isunknown(), we have a New function [COLOR="MediumSeaGreen"]isstyleunknown()[/COLOR] specifically to look for style pages from UnknownTracker.
+[*] Fixed multiple errors in the new bulkmode code when running with GridList.
+
+[*] Keyboard-mode only. Added a "BulkMode" capability for an inventory manager addon to turn off AutoCategory sorting in the Guild Bank while moving items to or from the guild bank - thereby speeding up the process immensely. Your inventory manager addon will need to set and release BulkMode inside of the addon to temporarily disable guildbank sorting and categorizing. To start, the author needs to set that their addon has an optional dependency on AutoCategory
+[CODE]
+## OptionalDependsOn: AutoCategory
+[/CODE]
+and then to turn on bulk mode:
+[CODE]
+	if AutoCategory then
+		AutoCategory.BulkMode = true
+	end
+[/CODE]
+before starting the automated guildbank management process. Once the process is done, the author then needs to reenable AutoCategory sorting and categorization with the following code.
+[CODE]
+	if AutoCategory and AutoCategory.BulkMode and AutoCategory.BulkMode == true then
+		AutoCategory.BulkMode = false
+		PLAYER_INVENTORY:UpdateList(INVENTORY_GUILD_BANK)
+	end
+[/CODE]
+(Note: If the author does not do this second part, the sorting and categorization that AutoCategory provides will be reenabled when the Guild Bank window is closed.)
+[*] Other performance enhancing changes.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.32(59)[/COLOR]:
+[*] Reverting changes while I work on the integration with GridList bug. This version is identical to previous 2.30 except the change in version number.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.31(58)[/COLOR]:
+[*] Version changes removed.
+[/LIST]
+
+
+[COLOR="DeepSkyBlue"]2.30(57)[/COLOR]:
+[LIST]
+[*] Enahncement to function [COLOR="MediumSeaGreen"]ck_isknown()[/COLOR] to accept an optional parameter specifying the character name in the same account who is your crafter and returns true or false if the item in question is marked as known by the specified character by CharacterKnowledge. If you do not specify a character name, then it assumes that you want ck_isknown() to use the current character. If you misspell your character name, or provide a character from a different account, it will ignore the parameter and assume you meant the current character.
+Exampe:
+[CODE]
+    ck_isknowncat("recipe") and not ck_isknown("My Crafty Crafter")
+[/CODE]
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.29 (56)[/COLOR]:
+[LIST]
+[*] New - Integration with CharacterKnowledge addon, requested by tralce.
+[*] New function [COLOR="MediumSeaGreen"]ck_isknowncat()[/COLOR] returns true or false if the item in question belongs to one of the categories recognized by CharacterKnowledge - "recipe", "plan", or "motif". You may specify one or more of these categories to restrict the membership you are looking for, or if you leave it empty then the function will check membership against any of the known categories.
+[*] New function [COLOR="MediumSeaGreen"]ck_isknown()[/COLOR] returns true or false if the item in question is marked as known for the current character (and server) by CharacterKnowledge. Note that this function will return false when tested against an item (such as a piece of armor, or a potion) that is not tracked by CharacterKnowledge. A recommended rule for checking unknowns would be
+[CODE]
+    ck_isknowncat() and not ck_isknown()
+[/CODE]
+More specifically, you can look for unknown recipes only by the following:
+[CODE]
+    ck_isknowncat("recipe") and not ck_isknown()
+[/CODE]
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.28 (55)[/COLOR]:
+[LIST]
+[*] New - Spanish language translation courtesy of MasterZiggy.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.27 (54)[/COLOR]:
+[LIST]
+[*] New setting to change category names from "Set (God Gear)" to simply "God Gear" when using the autoset rule. The default setting (ON) is to behave as it always has before. Turning it off will enable the display of "God Gear" instead of the old "Set (  )". Note that changing this setting will change all of your collapsed categories back to expanded in your inventory because those are stored by name.
+Categories are usually named "rule name" or "rule name (sub-name)" when there is a sub-name provided. Typically the autoset(), the FCOIS plugin, and the AlphaGear plugins are known to provide sub-names. If a subname is not provided, then we always display the only the rule name as the category.
+[*] FCOIS users, this new setting will also affect category names for FCOIS rules (in particular the Dynamic rules.)
+[*] AlphaGear users, this new setting will also affect category names for AlphaGear rules.
+[*] ANNOYING CHANGE for Plugin authors: Where previously, you would append " (sub-name)" to the AutoCategory.AdditionCategoryName, now you should simply assign your subname to it (AutoCategory.AdditionCategoryName = subname). The AutoCategory addon will be responsible for putting the subname in parentheses as necessary for display.
+[*] Translations of:
+[code]
+	SI_AC_MENU_GS_CHECKBOX_SHOW_CATEGORY_SET_TITLE = "Show 'Set(name)' for autosets",
+	SI_AC_MENU_GS_CHECKBOX_SHOW_CATEGORY_SET_TITLE_TOOLTIP = "Show 'Set(name)' instead of 'name' in inventory for autosets",
+[/code]
+are requested for German, French, Russian, and Chinese to update the new strings for those languages
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.26 (53)[/COLOR]:
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]isinzone()[/COLOR] returns true or false if the name of the item in question contains the name of the current zone. (Primarily useful for treasure maps and surveys!)
+[*] New function [COLOR="MediumSeaGreen"]zone()[/COLOR] returns the name of the current zone.
+[*] API bump.
+[/LIST]
+Gamepad changes from [COLOR="Gold"]Friday-the13-rus.[/COLOR]
+[LIST]
+[*] Fix for gamepad guild bank and updated gamepad inventory keybinds position to match vanilla inventory
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.25 (52)[/COLOR]:
+[LIST]
+[*] Require minimum version of installed LibAddonMenu to be at least 32. Earlier versions will break the user interface.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.24 (51)[/COLOR]:
+[LIST]
+[*] Implemented minor speedup suggested by Klingo. Thanks!
+[*] Update minimum versions of required libraries checked for.
+[*] API bump.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.23 (50)[/COLOR]:
+FCOItemSaver integration enhancements: (requested by Baertram)
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]isfcoisprotected()[/COLOR] checks if the item is protected by FCOIS.
+[*] New function [COLOR="MediumSeaGreen"]isfcoisgear()[/COLOR] checks of the item is marked as gear in FCOIS.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.22 (49)[/COLOR]:
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]getamountttc()[/COLOR] to get the number of sales for the current item from TTC.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.21 (48)[/COLOR]:
+[LIST]
+[*] Put in a fix addressing the lag issue with banking. 
+[*] Commented out the remains of the old (nonsupported) Inventory Grid View addon integration. For using a grid inventory view with AutoCategory, I recommend the Grid List addon. 
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.20 (47)[/COLOR]:
+[LIST]
+[*] Merged in code from @Saenic to turn on/off the display of the plus/minus to expand/condense individual categories within the inventory. 
+    The default setting is to have the display of plus/minus be ON (as it worked before).
+[*] Added the following new item trait types introduced with the companions: 
+    o armor: 
+	  [COLOR="MediumSeaGreen"]armor_aggressive, armor_augmented, armor_bolstered, armor_focused, armor_prolific, armor_quickened, armor_shattering, armor_soothing, armor_vigorous[/COLOR]
+    o jewelry: 
+	  [COLOR="MediumSeaGreen"]jewelry_aggressive, jewelry_augmented, jewelry_bolstered, jewelry_focused, jewelry_prolific, jewelry_quickened, jewelry_shattering, jewelry_soothing, jewelry_vigorous[/COLOR]
+    o weapon: 
+	  [COLOR="MediumSeaGreen"]weapon_aggressive, weapon_augmented, weapon_bolstered, weapon_focused, weapon_prolific, weapon_quickened, weapon_shattering, weapon_soothing, weapon_vigorous[/COLOR]
+[*] Added the following item type (type): [COLOR="MediumSeaGreen"]group_repair[/COLOR]
+[*] Added the following specialized item types (sptype): 
+    [COLOR="MediumSeaGreen"]collectible_style_page, container_currency, container_style_page, siege_lancer, trophy_dungeon_buff_ingredient[/COLOR]
+[*] Removed the former item filter type (filtertype) [COLOR="LightSeaGreen"]reuse[/COLOR] that was removed by ESO.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.19 (46)[/COLOR]:
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]iscompaniononly()[/COLOR] allows you to select companion gear.[/COLOR]
+[*] New operand for [COLOR="MediumSeaGreen"]filtertype(...)[/COLOR] which now also allows you to specify [COLOR="MediumSeaGreen"]companion[/COLOR] as one of the filters.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.18 (45)[/COLOR]:
+[LIST]
+[*] Reworked rule matching to continue matching against other rules after a rule errors out. Previously it would stop trying to match and just toss everything after that item into "Others".
+[*] Fixed problem reported by RufusRedBeard that turning of a AutoCategory plugin addon would cause errors when the plugin-reliant rule was tried to be evaluated anyway.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.17 (44)[/COLOR]:
+[LIST]
+[*] Reworked the inventory sorting to avoid errors with new Blackwood chapter.
+[*] API bump (Blackwood)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.16 (43)[/COLOR]:
+[LIST]
+[*]  New function [COLOR="MediumSeaGreen"]isreconstructed() allows you to select gear that has been reconstructed using the transmute station.[/COLOR]
+[*]  New function [COLOR="MediumSeaGreen"]istransmuted() allows you to select gear that has had the trait changed using the transmute station.[/COLOR]
+[*]  New function [COLOR="MediumSeaGreen"]isunbound() is a convenience function which is essentially equivalent to [CODE]not isbound()[/CODE].[/COLOR]
+[/LIST]
+Gamepad changes from [COLOR="Gold"]Friday-the13-rus.[/COLOR]
+[LIST]
+[*] Fixed assigning and removing item to quickslot using Extended Supplies Category.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.15 (42)[/COLOR]:
+From [COLOR="Gold"]Friday-the13-rus.[/COLOR]
+[LIST]
+[*] Update 29 compatibility
+[*] Added gamepad Fence (sell and launder)
+[*] Fixed gamepad Buy back
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.14 (41)[/COLOR]:
+From [COLOR="Gold"]Friday-the13-rus.[/COLOR] New gamepad functionality and fixes, and Russian language updates:
+[LIST]
+[*] Fixed error when opening container if it on the first place
+[*] Fixed error when equipping poisons
+[*] Fixed situation when all items shown in poisons category
+[*] Added compare mode to "Extended" Supplies category (can compare current and equipped item). 
+[*] Fixed sorting for bank
+[*] The addon categories are applying to all gamepad inventory categories
+[*] Added option to disable "Extended" Supplies category
+[*] Updated RU translation
+[/LIST]
+
+[COLOR="Teal"]About the gamepad "Extended Supplies":[/COLOR]
+[LIST]
+[*] "Extended" Supplies category is Supplies category that contains all items from inventory.
+[*] The gamepad settings for the addon contains 2 options: "Enable inventory support" and "Enable extended Supplies category".
+If the first option disabled, the addon is not affect gamepad inventory at all.
+If the first option enabled, the addon categories are applying to whole gamepad inventory.
+If the second option disabled, gamepad inventory contains all default categories (Materials, Furnishings and Slottable items) and default Supplies category.
+If the second option enabled, Supplies category transforms to "Extended" Supplies category. Materials, Furnishings and Slottable items categories are hiding.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.13 (40)[/COLOR]:
+[LIST]
+[*] Added a setting to Enable the new gamepad support introduced by 2.12. (The setting is OFF/DISABLED by default.)
+[*] Separated the gamepad and the keyboard hooks into separate files.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.12 (39)[/COLOR]:
+[LIST]
+[*] New gamepad support. Code provided by [COLOR="Gold"]Friday-the13-rus.[/COLOR] I do not have a gamepad to be able to test with, so I have no idea how well it will work for you.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.11.1 (38)[/COLOR]:
+[LIST]
+[*] Modified function [COLOR="MediumSeaGreen"]isnotcollected()[/COLOR] so that it returns true if the gear is [COLOR="MediumSeaGreen"]non-crafted set[/COLOR] gear that is not collected. Returns false if the gear is not set get or it has already been collected.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.11 (37)[/COLOR]:
+[COLOR="MediumSlateBlue"]Enhancement[/COLOR]
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]iscollected()[/COLOR] allows you to select set gear that you have already collected. Returns true if the gear is set gear that is collected. Returns false if the gear is not set get or it has not yet been collected.
+[*] New function [COLOR="MediumSeaGreen"]isnotcollected()[/COLOR] allows you to select set gear that you have not yet collected. Returns true if the gear is set gear that is not collected. Returns false if the gear is not set get or it has already been collected.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.10 (36)[/COLOR]:
+[LIST]
+[*] API bump (Markarth).
+[*] Zenimax compatibility enum and function updates.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.9 (35)[/COLOR]:
+[COLOR="MediumSlateBlue"]Enhancement[/COLOR]
+[LIST]
+[*] New value added for [CODE]type()[/CODE]: [COLOR="MediumSeaGreen"]"container_currency"[/COLOR] allows you to identify a container of transmute crystals. Requested (and code provided) by Drakhyr.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.8 (33)[/COLOR]:
+[COLOR="MediumSlateBlue"]Enhancement[/COLOR]
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]isinbackpack()[/COLOR] allows you to check if items is in your backpack or is currently being worn. Requested by AlbertVonMoosseedorf. An example of use for this new function could be a "deconstruct inventory" to list thing that you want to decon that ignores the items in the bank. For instance:
+[CODE]
+isinbackpack() and not ismonsterset() and traitstring("intricate","invigorating","training") and ((type("armor","weapon") and not isset()) or equiptype("head","shoulders"))
+[/CODE]
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.7.2 (32)[/COLOR]:
+[LIST]
+[*] Corrected the text for Home Storage Chests in German thanks to report by AlbertVonMoosseedorf.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.7.1 (31)[/COLOR]:
+[LIST]
+[*] Parameter values "mythic" or "orange" for the function [COLOR="MediumSeaGreen"]quality()[/COLOR] now really does allow you to check if items are mythic quality. (Finally got a mythic item to test with!)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.7 (30)[/COLOR]:
+COLOR="MediumSlateBlue"]Enhancement[/COLOR]
+[LIST]
+[*] New parameter values "mythic" or "orange" for the function [COLOR="MediumSeaGreen"]quality()[/COLOR] allows you to check if items are mythic quality. 
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.6 (29)[/COLOR]:
+COLOR="MediumSlateBlue"]Enhancement[/COLOR]
+[LIST]
+[*] New function [COLOR="MediumSeaGreen"]istreasure()[/COLOR] allows you to check if items are considered Treasure (i.e. random junk that you can sell for good money). 
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.5 (28)[/COLOR]:
+[LIST]
+[*] Updated the ITEM_QUALITY_ values to correspond to the change to ITEM_DISPLAY_QUALITY_ values that was brought in by Greymoor.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.4.6 (27)[/COLOR]:
+[LIST]
+[*] API bump.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.4.5 (26)[/COLOR]:
+[LIST]
+[*] Added Russian language strings courtesy of Ckau.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.4.4 (25)[/COLOR]:
+[LIST]
+[*] Set up the character default settings to the same as the account-wide default settings.
+[*] Add in minimum version checking for UnknownTracker.
+[*] Removed version checking for a library that we don't even use.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.4.3 (24)[/COLOR]:
+[LIST]
+[*] Add in predefined rules for UnknownTracker integration plugin.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.4.2 (23)[/COLOR]:
+[LIST]
+[*] Remove annoying debug printout.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.4.1 (22)[/COLOR]:
+[LIST]
+[*] Fix problem with isunknown() returning false where none of the toons knew the item.
+[*] Fix addon version.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.4 (21)[/COLOR]:
+COLOR="MediumSlateBlue"]Enhancement[/COLOR]
+[LIST]
+[*] Now integrated with the Unknown Tracker Addon to allow you to write rules about if a recipe, motif, style page, furnishing recipes, or runeboxes are unknown to your character(s). [I] Requires version 0.63 of the addon "Unknown Tracker" to be installed for this to work. [/I] (Thanks to kadeer for modifications to "Unknown Tracker" to allow this to work!)
+[*] New function [COLOR="MediumSeaGreen"]isunknown()[/COLOR] with zero or more strings to match knowledge of the recipe to the named characters (names are case sensitive). If you use [COLOR="MediumSeaGreen"]isunknown()[/COLOR] without any parameters, it will return true if the learnable item (recipe, etc) is unknown to ANY of your toons. If you use [COLOR="MediumSeaGreen"]isunknown("me")[/COLOR] with the special parameter "me" then it will return true if the learnable item is unknown to the toon that you are currently logged in on. Finally you can specify specific toon names as parameters so you can tell if the learnable item is unknown to your specific "crafter" toons. (Note that the options for Unknown Tracker to turn off displaying for specific types of items will also turn off AutoCategory's ability to detect them with this rule.)
+[*] New function [COLOR="MediumSeaGreen"]isrecipeunknown()[/COLOR] which does the same thing as [COLOR="MediumSeaGreen"]isunknown()[/COLOR] except only for food and drink provisioning recipes.
+[*] New function [COLOR="MediumSeaGreen"]isfurnishingunknown()[/COLOR] which does the same thing as [COLOR="MediumSeaGreen"]isunknown()[/COLOR] except only for furnishing recipes.
+[*] New function [COLOR="MediumSeaGreen"]ismotifunknown()[/COLOR] which does the same thing as [COLOR="MediumSeaGreen"]isunknown()[/COLOR] except only for motifs.
+[/LIST]
+For those of you who are new to the Unknown Tracker addon, it will add lists of characters to the inventory item information boxes (tooltips) with colors distinguishing the toons who know if from the toons that do not know it. That cannot be turned off at this time. If you have another addon also doing that, it might be possible that the other addon will allow you to turn those off. In particular, ESO Master Recipe List will add character lists to the Recipes, and TraitBuddy will add them to motifs - and both can be turned off.
+
+[COLOR="DeepSkyBlue"]2.3.1 (20)[/COLOR]:
+[LIST]
+[*] Set AddonVersion in manifest file.
+[*] Now checks dependent library versions (where possible) and will write error messages to LibDebugLogger to indicate when a dependent library is out-dated for the current version of AutoCategory. Messages can be viewed with the DebugLogViewer (recommended addon).
+[/LIST]
+
+[COLOR="MediumSlateBlue"]Breaking Change[/COLOR]
+[LIST]
+[*] [COLOR="DarkOrange"]Now requires the library LibDebugLogger in addition to the libraries LibSFUtils, LibAddonMenu-2.0, and LibMediaProvider-1.0 to be installed separately.[/COLOR]
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.3[/COLOR] Changes:
+COLOR="MediumSlateBlue"]Enhancement[/COLOR]
+[LIST]
+[*] Added an [COLOR="MediumSeaGreen"]itemstyle()[/COLOR] with one or more strings that are the names of motifs. This function will return true if the style of the item matches one of the names in the parameter list of [COLOR="MediumSeaGreen"]itemstyle(...)[/COLOR]. Capitalization is ignored, but spelling of the motif name must be correct - to include spaces and punctuations marks - for instance "dro-m'athra" must include both the "-" and the "'", and "dark brotherhood" is two words separated by a space. (Note that with multi-word motif names, the rule checker will probably warn that it does not recognize the words after the first word of the name.)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.2.2[/COLOR] Changes:
+[LIST]
+[*] Added sort key conflict resolution by request of Mladen90.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.2.1[/COLOR] Changes:
+[LIST]
+[*] Fix version to prevent being listed as "Out of Date".
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.2[/COLOR] Changes:
+COLOR="MediumSlateBlue"]Enhancements[/COLOR]
+[LIST]
+[*] Added an [COLOR="MediumSeaGreen"]charname()[/COLOR] with one or more strings that are the names of your characters. This function will return true if the current character name matches one of the names in the parameter list of [COLOR="MediumSeaGreen"]charname(...)[/COLOR]. This will allow you to write rules which apply to specific characters only.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.1.1[/COLOR] Changes:
+[LIST]
+[*] API bump
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.1[/COLOR] Changes:
+[COLOR="MediumSlateBlue"]Bug Fixes[/COLOR]
+[LIST]
+[*] Fixed problem with islockpick() not being recognized as a function. (reported by Amber1019)
+[/LIST]
+
+[COLOR="MediumSlateBlue"]Enhancements[/COLOR]
+[LIST]
+[*] Modified islockpick() so that it only gets lockpicks (lockpick tools) instead of lockpicks and repair kits (the "other" tools).
+[*] Added an [COLOR="MediumSeaGreen"]ischarbound()[/COLOR] to items that are marked as "Character Bound" in inventory. Note that items that match [COLOR="MediumSeaGreen"]ischarbound()[/COLOR] will also match [COLOR="MediumSeaGreen"]isbound()[/COLOR] since character bound is a type of binding. If you want bound that are not also character bound, you will need to specify "~ischarbound() and isbound()" for account bound items only.
+
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.0.5[/COLOR] Changes:
+[LIST]
+[*] Fixed problem with getmaxtraits() returning one more than the number of traits on a crafted potion. (reported by TheMikrobe)
+[*] API bump
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.0.4[/COLOR] Changes:
+[LIST]
+[*] Fixed bug that was causing bag categories that had been changed in priority or removed from the bag to be replaced or duplicated (with the original priority) if they were part of the default set. (reported by rhaeven)
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.0.3[/COLOR] Changes:
+[LIST]
+[*] Fixed bug that was causing getpricettc() (reported by Ivo_ESO), getpricemm(), and alphagear() to not work in rules.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.0.2[/COLOR] Changes:
+[LIST]
+[*] Fixed minor bug in Bag Export.
+[*] Fixed bug in type() and sptype() where it was ignoring any arguments after the first one.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.0.1[/COLOR] Changes:
+[LIST]
+[*] Fixed loading bug in integration for SetTracker, TTC, and Master Merchant.
+[/LIST]
+
+[COLOR="DeepSkyBlue"]2.0[/COLOR] Changes:
+[COLOR="MediumSlateBlue"]Breaking Changes[/COLOR]
+[LIST]
+[*] [COLOR="DarkOrange"]Now requires the libraries LibSFUtils, LibAddonMenu-2.0, and LibMediaProvider-1.0 to be installed separately.[/COLOR]
+[*] The SavedVariables for version 2.0 have changed formats from 1.37 in order to support multiple servers and character name changing. [COLOR="DarkOrange"]This means that 2.0 will not be able to read in your 1.37 category definitions.[/COLOR] I recommend that you move your live\SavedVariables\AutoCategory.lua somewhere else (or print it) so that you can refer to your old rules to enter them back into the new AutoCategory.
+[/LIST]
+
+[COLOR="MediumSlateBlue"]Bug Fixes[/COLOR]
+[LIST]
+[*] Fixed error that prevented AutoCategory from working with the Quality Sort addon. (Thanks to Silvereyes for the corrected code.)
+[*] Included in the patch for Inventory Grid View integration by Provision to properly display the default icons for Ornate, Intricate, Research, etc. on the grid cells instead of next to them.
+[/LIST]
+
+[COLOR="MediumSlateBlue"]Enhancements[/COLOR]
+[LIST]
+[*] Elsweyr support.
+[*] Changed the AutoCategory settings page to try to make it easier to understand and use.
+[*] NEW: Added a "Check" button to the Add Category section so that you can test to see that your rule will compile properly when you write it. If it does not compile correctly, the area to the left of the Check button will show an error message to try to tell you what was wrong with it.
+[*] Added a "Hide ungrouped items" option to the Bag Settings which will turn on/off the display of inventory items which do not match any of the Categories which you have assigned to that particular bag. These are the items that are typically listed in "Other" (unless you've changed the name in the Appearance Setttings).
+
+[*] Modified iscrafted() so that it will return true for crafted potions or poisons so you can:
+    [COLOR="MediumSeaGreen"]type("poison","potion") and iscrafted()[/COLOR]
+[*] Added the base ability to use some convenience items that are actually combinations of several base game items. 
+[*] Added convenience items:
+    Item Types (type):
+    o [COLOR="MediumSeaGreen"]enchanting_rune[/COLOR] -  this will match against enchanting_rune_aspect, enchanting_rune_essence, or enchanting_rune_potency
+    Specialized Item Types (sptype):
+    o [COLOR="MediumSeaGreen"]glyph[/COLOR] - this will match against glyph_armor, glyph_weapon, or glyph_jewelry 
+[*] Added an [COLOR="MediumSeaGreen"]islockpick()[/COLOR] to detect lockpicks in inventory since, due to a Zenimax bug, lockpicks do not belong to [COLOR="MediumSeaGreen"]type("lockpick")[/COLOR].
+[*] Added some convenience values to traittype() that combines existing values:
+    o [COLOR="MediumSeaGreen"]intricate[/COLOR] -  this will match against armor_intricate, jewelry_intricate, or weapon_intricate
+    o [COLOR="MediumSeaGreen"]divines[/COLOR] -  this will match against armor_divines
+    o [COLOR="MediumSeaGreen"]infused[/COLOR] -  this will match against armor_infused, jewelry_infused, or weapon_infused
+    o [COLOR="MediumSeaGreen"]ornate[/COLOR] -  this will match against armor_ornate, jewelry_ornate, or weapon_ornate
+    o [COLOR="MediumSeaGreen"]nirnhoned[/COLOR] -  this will match against armor_nirnhoned, or weapon_nirnhoned
+[*] Added support for the development of addon integrations to AutoCategory as separate plugins. Rewrote three of the internally provided integrations (FCOIS, Iakoni, and ItemSaver) in the form that standalone plugin integrations would take to demonstrate how to register the plugin with AutoCategory, provide additional rule functions, predefined rules, and localization strings where necessary.
+[/LIST]
+  
+[COLOR="MediumSlateBlue"]Predefined Rules[/COLOR]
+[LIST]
+[*] Changed the way that predefined rules are loaded so that they are always loaded first and then your customizations are loaded afterwards. This allows you to get new predefined rules automatically added as they come out with addon or plugin updates. It also means that if you accidentally delete a predefined rule, you can get it back by simply reloading ui.
+[*] Changed the way that predefined rules are loaded so that predefined rules for addon integrations such as FCOIS and Iakoni Gear Changer are only loaded when you have those particular addons installed. (Note that this applies when the addons are first installed - once the predefines get loaded once, they will get saved to your saved variables. Rules in SavedVariables are always loaded after that until they are deleted. A planned enhancement that did not make this version is to only save customized categories that are actually customized, since now predefines always get loaded.)
+[*] Added predefined rules for FCOIS dynamics 11-30 for when you are starting AutoCategory without preexisting saved variables.
+[/LIST]
+
+[COLOR="MediumSlateBlue"]Localization[/COLOR]
+[LIST]
+[*] Expanded the remaining alternative language files to include strings for the FCOIS dynamics 11-30.
+[*] Added additional localization strings for German from Baertram's git pull request.
+[*] Removed the alternative language files which were still in English. When we get translations, we can add them back with appropriate values.
+[*] Converted the way that language strings are defined to use the new LibSFUtils.LoadLanguage() function to load the particular language required (or the specified default if the client language is not available).
+[/LIST]
+
+[COLOR="MediumSlateBlue"]Internal (non-visible) Changes[/COLOR]
+[LIST]
+[*] Moved FCOIS integration into an included plugin file.
+[*] Moved ItemSaver integration into an included plugin file.
+[*] Moved GearChangerByIakoni integration into an included plugin file. Moved the GearChanger language strings into the plugin and load them separately using the AutoCategory.LoadLanguage() to supplement the existing string tables. While not strictly necessary, it acts as both a proof-of-concept and an example for how external plugins to AutoCategory can work.
+
+[*] Removed specific integration code for DoItAll addon as that integration was moved to the DoItAll addon instead of residing in AutoCategory (Baertram's pull request).
+
+[*] Adopted by Shadowfen after prolonged lack of response from the previous authors. Renamed to "AutoCategory - Revised".
+[/LIST]
+
+[COLOR="DeepSkyBlue"]1.37[/COLOR] Changes:
+Released by Shadowfen
+[LIST]
+[*] New filter function: getmaxtraits()
+    When used with posions and potions, such as this rule:
+    [COLOR="MediumSeaGreen"]type("poison","potion") and getmaxtraits() <=2[/COLOR]
+    it can tell you which are crafted (i.e. having more than one trait).
+    This new feature is courtesy of Tonyleila.
+[*] Updated the specialized item types. This adds:
+    Specialized Item Types (sptype):
+    o [COLOR="MediumSeaGreen"]trophy_toy[/COLOR]
+    o [COLOR="MediumSeaGreen"]holiday_writ[/COLOR]
+[/LIST]
+
+[COLOR="DeepSkyBlue"]1.36[/COLOR] Changes:
+Released by Shadowfen
+[LIST]
+[*] Updated the item types, specialized types, filter types, and trait types lists with the latest values from Wrathstone. This adds:
+    Item Types (type):
+     o jewelry_booster
+     o jewelry_material
+     o jewelry_raw_booster
+     o jewelry_raw_material
+     o jewelry_raw_trait
+     o jewelry_trait
+     o recall_stone
+    Specialized Item Types (sptype):
+     o furnishing_attunable_crafting_station
+     o furnishing_material_jewelry
+     o recall_stone_keep
+     o recipes_jewelry_sketch_furnishing
+     o trophy_collectible_fragment
+     o trophy_upgade_fragment
+     o weapon
+    Filter Types (filtertype):
+     o jewelry
+    Trait Types (traittype):
+     o jewelry_bloodthirsty
+     o jewelry_harmony
+     o jewelry_infused
+     o jewelry_intricate
+     o jewelry_protective
+     o jewelry_swift
+     o jewelry_triune
+[/LIST]
+
+[COLOR="DeepSkyBlue"]1.35[/COLOR] Changes:
+Released by Shadowfen
+[LIST]
+[*]Bumped API version for Wrathstone
+[*]LibStub and LibAddonMenu-2.0 must now be installed separately from AutoCategory.
+[*]Added support for FCOIS dynamics 11-30.
+[*]Merged in Provision's integration fixes for IGV.
+[*]Added jewelry crafting materials, raw materials and boosters for the sptype() check
+[*]Fixed a crash when a rule could not compile.
+[/LIST]
+
+1.34 Changes:
+[LIST]
+[*]Added itemname() to match items by name. Returns true if the item name contains any of the provided strings (case insensitive), e.g. itemname("Maelstrom", "Alkosh")
+[/LIST]
+
+
+1.33 Changes:
+[LIST]
+[*]Bumped API version for Murkmire.
+[/LIST]
+
+
+1.32 Changes:
+[LIST]
+[*]More huge performance improvements! Thanks again to Shadowfen who did all the work here. (Pre-compile rules as they are changed)
+[*]Replaced Set Tracker support function GetSetTrackerState() with IsTracked(). If you used the old function, you will need to update your rule (sorry). This was done to bring the usage inline with the way the other similar functions work. Usage, e.g.: IsTracked("Sell/Decon", "Collecting")
+[/LIST]
+
+
+1.31 Changes:
+[LIST]
+[*]Big performance increase (2x or better for me), thank you to Shadowfen for the code change suggestion!
+[*]Updated libraries
+[/LIST]
+
+
+1.30 Changes:
+[LIST]
+[*]Added French translation. Big thanks to Hasgaad!
+[/LIST]
+
+
+1.29 Changes:
+[LIST]
+[*]HOTFIX - resolve errors at merchant due to Wolfhunter API changes.
+[/LIST]
+
+
+1.28 Changes:
+[LIST]
+[*]Bumped API version for Wolfhunter.
+[/LIST]
+
+
+1.27 Changes:
+[LIST]
+[*]Bumped API version for Summerset.
+[*]Added support for jewelry crafting ingredients. Note: you will need to either create a new rule yourself, or reset AutoCategory to default settings to grab the new default rule.
+        To create your own rule, use
+        Lua Code:
+
+            filtertype("jewelrycrafting")
+
+        To reset to default settings: In the Auto Category add-on menu, use the Defaults button. Then use the /reloadui command. Important: this will remove any custom rules/settings you have defined.
+[*]New API function "IsMarkedIS()" - use to test whether an item is marked with Item Saver. Note that FCO ItemSaver users should continue to use "IsMarked()"
+[/LIST]
+
+
+1.26 Changes:
+[LIST]
+[*]New API function "islocked()" - use to test whether an item has been locked.
+[/LIST]
+
+
+1.24 Changes:
+[LIST]
+[*]Resolve circular dependency issue with DoItAll (requires matching update to DoItAll).
+[/LIST]
+
+
+
+1.23 Changes:
+[LIST]
+[*]Added Set Tracker support! Use "getsettrackerstate()" to retrieve the name of the Set Tracker category, if an item is tracked.
+[*]Added charlevel() and charcp() to pull current character level and CP. Can be used to compare item level to your character level with a custom rule. (Thanks to VulcanTourist)
+[/LIST]
+
+
+1.22 Changes:
+[LIST]
+[*]You can now define separate settings for your home storage chests (they will take their initial settings from your bank settings, but can be customized at will).
+[/LIST]
+
+
+1.21 Changes:
+[LIST]
+[*]Added support for home storage chests (big thanks to raj72616a). Currently, they will use the settings selected for your bank (no custom settings for home chests yet).
+[*]Bumped API version for Dragon Bones.
+[*]New maintainer (crafty35a).
+[/LIST]
+
+
+
+1.19 Changes:
+[LIST]
+[*]Fixed Localization.
+[*]New Feature: Collapsed/Expanded status can be saved now. You can turn it on in the general setting menu.
+[/LIST]
+
+
+1.18 Changes:
+[LIST]
+[*]Fixed Bug: IGV will show the last category correctly.
+[*]Fixed Bug: Items Count can be turned off permanently.
+[*]Fixed Bug: Quest Panel will not complain about lua error.
+[/LIST]
+
+
+1.17 Changes:
+[LIST]
+[*]Removed debug logs in destruct/improvement panel
+[/LIST]
+
+
+1.16 Changes:
+[LIST]
+[*]New Feature: Collapsible Category. You can now click the header to fold all items inside. Get an overall view of your inventory! Context Menu is available, you can collapse/expand all headers with one click.
+[*]New Feature: Hide-able Category. You can hide some categories to focus on the items you need to deal with. Also you can hide the items that are not matched in the 'Other' category. Can be set in bag setting menu.
+[*]New Feature: Items Count. You can get a total number about how many items inside the category. This can be turned off in the general setting menu.
+[*]Account Wide setting changed: You can switch account wide/character wide for each of your characters. (* Need to select again if you use character setting before, don't affect the bag settings)
+[*]Fixed bug: Removed duplicated rules in bag setting.
+[*]Fixed bug: German set names should be able to be matched now.
+[*]Changed api:keepresearch()
+[*]After a lot of tests, the api is not working fine. So I decided to make the api work more simple: It will match all the items can be researched. If you want better result, please use it with other api together. This is a basic idea to filter the item that is not part of a set and can be researched:
+    Lua Code:
+
+        keepresearch() and not isset()
+
+[*]New api:isset() api:ismonsterset()
+[/LIST]
+
+
+1.15 Changes:
+[LIST]
+[*]New feature: Category header's height is customizable!
+[*]New feature: You can change the name of ungrouped Category.
+[*]New feature: Added a message in chat when toggling the add-on's function, and a switch for it to turn on/off.
+[*]Fixed bug: Toggling in Inventory Grid View should not result a bad layout.
+[*]Fixed bug: Removed tag should not to be restored after relog.
+[*]New Add-ons Integrated!
+    Do It All: You can now use it with AC together.
+    Alpha Gear: Added a new api:alphagear
+    Master Merchant: Added a new api:getpricemm
+    Tamriel Trade Centre: Added a new api:getpricettc
+[*]New api:isinbank
+[/LIST]
+
+
+1.14 Changes:
+[LIST]
+[*]CwC is supported!
+[*]Fixed integration for Inventory Grid View(3.2).
+[/LIST]
+
+
+1.13 Changes:
+[LIST]
+[*]Fixed Bug: Setting for Craft Station is not working.
+[*]Added API:
+    Code:
+
+    getquality
+
+    please see api:getquality
+[*]Updated localization for Chinese.
+[/LIST]
+
+
+1.12 Changes:
+[LIST]
+[*]New Function: Export to all bag settings. You can now replace all bag settings by one of them.
+    Added API:
+    Code:
+
+    quality
+
+    please see api:quality
+[*]Fixed Bug: Import from bag setting will incorrectly make settings be linked together.
+[/LIST]
+
+
+1.11 Changes:
+[LIST]
+[*]New bags supported: Guild Bank / Craft Bag / Craft Station for both keyboard and gamepad mode.
+[*]New function: Import from bag setting: you can import from a bag setting to replace current one. No need to create it from the beginning. Make backups by copying your AutoCategory.lua in SavedVariables folder!
+[*]New add-on supported: Quick Menu you can toggle Auto Category by Quick Menu to save a key binding, check it out!
+[*]Added API:
+    Code:
+
+    sellprice
+    islearnable
+
+    please see api:sellprice and api:islearnable for more info.
+[/LIST]
+
+
+1.10 Changes:
+[LIST]
+[*]Added custom names from FCO Item Saver
+[*]Added API:
+    Code:
+
+    armortype
+    weapontype
+
+    please see api:armortype and api:weapontype for more info.
+[*]Added deconstruct & improvement support for keyboard mode.
+[/LIST]
+
+
+1.09 Changes:
+[LIST]
+[*]Integrated FCO Item Saver
+    Added API:
+    Code:
+
+    ismarked
+
+    please see api reference and tutorial and examples for more info.
+    Added Keybinding to toggle on/off.
+[/LIST]
+
+
+1.08 Changes:
+[LIST]
+[*]Fixed Category 'Trait/Style Gems' (If not changed, please try to restore to defaults)
+[*]Added Localization support.
+[/LIST]
+
+
+1.07 Changes:
+[LIST]
+[*]Fixed a rare issue of IGV integration.
+[/LIST]
+
+
+1.06 Changes:
+[LIST]
+[*]Fixed Quest tab issue.
+[*]Adjusted the height of header to the same as item row.
+[*]Added custom appearance of header text. You can set up them in the setting menu (or type /ac)
+[/LIST]
+
+
+1.05 Changes:
+[LIST]
+[*]Fixed multiple add-on compatible issue.
+[*]Fixed auto set name in different languages.
+[*]Added API:
+    Code:
+
+    iscrafted
+
+    please see api reference and tutorial for more info.
+[/LIST]
+
+
+1.04 Changes:
+[LIST]
+[*]Added gamepad trade inventory support. Thanks @catsith105 for testing!
+[/LIST]
+
+
+1.03 Changes:
+[LIST]
+[*]Integrated with 'Inventory Grid View'
+[*]Added a tutorial button.
+[*]Added a wiki home page and tutorial page.
+[/LIST]
+
+
+1.02 Changes:
+[LIST]
+[*]Fixed banking issue with deposit/withdraw items.
+[/LIST]
+
+
+1.01 Changes:
+[LIST]
+[*]Updated lib: LibAddonMenu to r24
+[*]Refined Addon Setting Menu
+[/LIST]

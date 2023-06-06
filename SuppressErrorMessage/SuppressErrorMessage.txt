@@ -1,0 +1,5 @@
+## Title: |c00ff00[必装]-SuppressErrorMessage(隐藏插件错误窗口)|r
+## Author: Naeramarth
+## APIVersion: 100016
+
+SuppressErrorMessage.lua

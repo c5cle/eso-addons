@@ -1,0 +1,38 @@
+<GuiXml>
+	<Controls>
+		<TopLevelControl name="Untaunted_TLW" clampedToScreen="true" hidden="true" resizeToFitDescendents="true">
+			<Anchor point="TOPLEFT" />
+			<Controls>
+				<Backdrop name="$(parent)Bg" inherits="ZO_DefaultBackdrop" hidden="true">
+					<Anchor point="TOPLEFT" offsetX="0" offsetY="0" />
+					<Anchor point="BOTTOMRIGHT" offsetX="0" offsetY="0" />
+				</Backdrop>
+			</Controls>
+		</TopLevelControl>
+		<Control name="Untaunted_UnitItemTemplate" virtual="true" resizeToFitDescendents="true">
+			<ResizeToFitPadding width="5" height="5" />
+			<Controls>
+				<Backdrop name="$(parent)Bg" centerColor="FF444444" edgeColor="00000000">
+					<Dimensions x="226" y="26" />
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)" offsetX="0" offsetY="0" />
+				</Backdrop>
+				<Texture name="$(parent)Icon" textureFile="/esoui/art/icons/poi/poi_groupboss_complete.dds">
+					<Dimensions x="24" y="24" />
+					<Anchor point="TOPLEFT" offsetX="0" offsetY="0" />
+				</Texture>
+				<StatusBar name="$(parent)Bar" color="FF00DD00">
+					<Dimensions x="198" y="22" />
+					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$(parent)Icon" offsetX="UNTAUNTED_UI_SCALE" offsetY="UNTAUNTED_UI_SCALE" />
+				</StatusBar>
+				<Label name="$(parent)Timer" horizontalAlignment="TEXT_ALIGN_Right" verticalAlignment="TEXT_ALIGN_CENTER" font="ZoFontGameMedium" text="15.0">
+					<Dimensions x="24" y="24" />
+					<Anchor point="RIGHT" relativePoint="RIGHT" relativeTo="$(parent)Bg" offsetX="-4" offsetY="0" />
+				</Label>
+				<Label name="$(parent)Label" horizontalAlignment="TEXT_ALIGN_LEFT" verticalAlignment="TEXT_ALIGN_CENTER" font="ZoFontGameMedium" wrapMode="TEXT_WRAP_MODE_ELLIPSIS">
+					<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$(parent)Icon" offsetX="5" offsetY="0" />
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" relativeTo="$(parent)Timer" offsetX="-4" offsetY="0" />
+				</Label>
+			</Controls>
+		</Control>
+	</Controls>
+</GuiXml>

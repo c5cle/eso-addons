@@ -1,0 +1,16 @@
+<Bindings>
+  <Layer name="SI_KEYBINDINGS_CATEGORY_GENERAL">
+    <Category name="Tamriel Trade Centre">
+      <Action name="TTC_SCAN_START">
+        <Down>
+          TamrielTradeCentre:StartNewGuildListingScan()
+        </Down>
+      </Action>
+      <Action name="TTC_TOGGLE_PRICE_TOOLTIP">
+        <Down>
+          TamrielTradeCentre.Settings.EnableItemToolTipPricing = not TamrielTradeCentre.Settings.EnableItemToolTipPricing
+        </Down>
+      </Action>
+    </Category>
+  </Layer>
+</Bindings>

@@ -1,0 +1,73 @@
+Version: 1.2.17 ---------------
+1.APIVersion Up 101036
+
+
+Version: 1.2.16 ---------------
+1.APIVersion Up 101035
+
+
+Version: 1.2.15 ---------------
+1.APIVersion Up 101033
+
+
+Version: 1.2.13 to 1.2.14 ---------------
+1.APIVersion Up 101032
+
+
+Version: 1.2.12 ---------------
+1.APIVersion Up 100035
+
+
+Version: 1.2.11 ---------------
+1.Add parameters to GetHouseBankIdList() & GetItemBagList()
+
+
+Version: 1.2.9 to 1.2.10 ---------------
+1.Update Debug Log Functions.
+
+
+Version: 1.2.8 ---------------
+1.Update Debug Log.
+
+
+Version: 1.2.7 ---------------
+1.APIVersion Up 100034
+
+
+Version: 1.2.4 to 1.2.6 ---------------
+1.APIVersion Up 100033
+2.Bug fix
+Fixed newlife request not being processed correctly.
+
+
+Version: 1.2.3 ---------------
+1.APIVersion Up 100032
+
+
+Version: 1.2.2 ---------------
+1.Add Change parameters to DebugIfMarify()
+
+
+Version: 1.2.1 ---------------
+1.Add Change parameters to DebugIfMarify()
+
+
+Version: 1.2.0 ---------------
+1.Add RemoveWithValue()
+
+
+Version: 1.1.7 ---------------
+1.Add DebugFunction()
+
+
+Version: 1.1.6 ---------------
+1.APIVersion Up 100031
+
+
+Version: 1.1.5 ---------------
+1. Use SecurePostHook.
+
+
+Version: 1.1.3 to 1.1.4 ---------------
+1. Start
+

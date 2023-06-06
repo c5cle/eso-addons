@@ -1,0 +1,9 @@
+## Title: LibMotifCategories
+## Author: Randactyl
+## Version: 2
+## AddOnVersion: 2
+## IsLibrary: true
+## APIVersion: 100034 100035 100036 100037 100038 100039
+
+LibMotifCategories.lua
+

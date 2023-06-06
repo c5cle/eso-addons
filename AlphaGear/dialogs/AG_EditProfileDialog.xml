@@ -1,0 +1,49 @@
+<GuiXml>
+	<Controls>
+		<TopLevelControl name="AGEditProfileDialog" inherits="ZO_CustomDialogBase">
+			<Dimensions x="800" y="225" />
+			<Anchor point="CENTER" offsetY="-45" />
+			<Controls>
+				<Control name="$(parent)Content" inherits="ZO_DialogContentAnchors">
+					<Controls>
+                        <Label name="$(parent)NameLabel" font="ZoFontGame" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_SELECTED" horizontalAlignment="LEFT" text="Name:">
+							<Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT"/>
+							<Anchor point="TOPRIGHT" relativeTo="$(parent)" relativePoint="TOPRIGHT"/>
+
+                            <!-- Anchor point="TOPLEFT" relativeTo="$(parent)" relativePoint="TOPLEFT" offsetY="3"/ -->
+                        </Label>
+						
+						
+		                <Backdrop name="$(parent)NameBG" inherits="ZO_SingleLineEditBackdrop_Keyboard">
+							<Anchor point="TOPLEFT" relativeTo="$(parent)NameLabel" relativePoint="BOTTOMLEFT" offsetY="5"/>
+							<Anchor point="TOPRIGHT" relativeTo="$(parent)NameLabel" relativePoint="BOTTOMRIGHT" offsetY="5"/>
+							<!-- Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)" offsetX="100" / -->
+							<Controls>
+								<EditBox name="$(grandparent)ProfileName" inherits="ZO_DefaultEditForBackdrop ZO_EditDefaultText">
+								</EditBox>			
+							</Controls>
+						</Backdrop>
+
+                        <Label name="$(parent)IndexLabel" font="ZoFontGame" color="INTERFACE_COLOR_TYPE_TEXT_COLORS:INTERFACE_TEXT_COLOR_SELECTED" horizontalAlignment="LEFT" text="Sort key:">
+							<Anchor point="TOPLEFT" relativeTo="$(parent)NameBG" relativePoint="BOTTOMLEFT" offsetY="10"/>
+							<Anchor point="TOPRIGHT" relativeTo="$(parent)NameBG" relativePoint="BOTTOMRIGHT" offsetY="10"/>
+                        </Label>
+						
+						
+		                <Backdrop name="$(parent)IndexBG" inherits="ZO_SingleLineEditBackdrop_Keyboard">
+							<Anchor point="TOPLEFT" relativeTo="$(parent)IndexLabel" relativePoint="BOTTOMLEFT" offsetY="5"/>
+							<Anchor point="TOPRIGHT" relativeTo="$(parent)IndexLabel" relativePoint="BOTTOMRIGHT" offsetY="5"/>
+							<Controls>
+								<EditBox name="$(grandparent)ProfileSortKey" inherits="ZO_DefaultEditForBackdrop ZO_EditDefaultText">
+								</EditBox>			
+							</Controls>
+						</Backdrop>
+						
+					</Controls>
+				</Control>
+				<Control name="$(parent)Cancel" inherits="ZO_CustomDialogButton" />
+				<Control name="$(parent)Accept" inherits="ZO_CustomDialogButton" />
+			</Controls>
+		</TopLevelControl>
+	</Controls>
+</GuiXml>

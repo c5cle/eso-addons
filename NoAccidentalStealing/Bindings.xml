@@ -1,0 +1,10 @@
+<Bindings>
+  <Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
+    <Category name="|cFF8080NoAccidentalStealing|r">
+      <Action name="CONFIRM_STEAL">
+        <Down>ConfirmStealing(true)</Down>
+        <Up>ConfirmStealing(false)</Up>
+      </Action>
+    </Category>
+  </Layer>
+</Bindings>

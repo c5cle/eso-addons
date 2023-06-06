@@ -1,0 +1,25 @@
+; This Add-on is not created by, affiliated with or sponsored by ZeniMax
+; Media Inc. or its affiliates. The Elder Scrolls® and related logos are
+; registered trademarks or trademarks of ZeniMax Media Inc. in the United
+; States and/or other countries. All rights reserved.
+; You can read the full terms at https://account.elderscrollsonline.com/add-on-terms
+
+## Title: |c00bfff[增强]-SuperStar(装备CP等级显示)|r
+## Author: Ayantir, Armodeniz
+## Contributors: Armodeniz, SigoDest, senorblackbean, Ego_666
+## Description: Search for a Superstar help you to be the SuperStar you ever wanted to be!
+
+## APIVersion: 101031
+## AddOnVersion: 005005004
+## Version: 5.0.4
+
+## DependsOn: LibSkillsFactory>=15 LibMainMenu-2.0>=40400
+
+## SavedVariables: SUPERSTAR
+
+SuperStar.lua
+i18n/en.lua
+i18n/$(language).lua
+
+SuperStar.xml
+bindings.xml

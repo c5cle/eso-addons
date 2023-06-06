@@ -1,0 +1,25 @@
+## Title: |cffdead[可选]-ActionDurationReminder(技能计时器)|r
+## Author: Cloudor
+## Version: 3.92
+## Description: Remind you time to refresh your actions.
+## APIVersion: 101037 101038
+## AddOnVersion: 030920
+## DependsOn: LibAddonMenu-2.0>=34
+## OptionalDependsOn: ScootworksCombat 
+## SavedVariables: ADRSV
+
+src/Addon.lua
+src/Utils.lua
+
+i18n/en.lua
+i18n/$(language).lua
+
+src/Settings.lua
+src/Models.lua
+src/Core.lua
+src/Views.lua
+src/Bar.lua
+src/Alert.lua
+src/Patch.lua
+
+

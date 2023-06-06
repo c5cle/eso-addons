@@ -1,0 +1,88 @@
+1.0 r24 (Calamath)
+- Fixed an issue where the MediaType table was not bypassed.
+
+1.0 r23 (Calamath)
+- Revamped the add-on framework for future extensions of the add-on API.
+- Addressed a potential vulnerability issue where the internal media table could be overwritten by direct access.
+- Excluded support for EsoZH add-on.
+- Updated API version to 101038 (ESO 9.0.x : Necrom)
+
+1.0 r22 (Calamath)
+- Simplified Chinese language mode support.
+- Temporarily excluded support for EsoZH.
+- Added embedded Chinese fonts as predefined fonts.
+- Some tweaks to backup font.
+- Updated API version to 101036 (ESO 8.2.x : Firesong)
+
+1.0 r21 (Calamath)
+- Added embedded Japanese fonts as predefined fonts.
+- Changed default font from Univers 55 to Univers 57
+- Compatibility and support for unofficial language mod add-ons, EsoBR, Cervanteso, Italian Scrolls Online, EsoKR, Skrybowie Tamriel, EsoUA and EsoZH.
+- Updated API version to 101035 (ESO 8.1.x : Lost Depths)
+
+1.0 r20 (Calamath)
+- Removed references and uses of LibStub completely.
+- Updated API version to 101034 (ESO 8.0.x : High Isle)
+
+1.0 r19 (Calamath)
+- Updated API version to 101033 (ESO 7.3.x : Ascending Tide)
+
+1.0 r18 (ArtOfShred)
+- Updated API version for Blackwood.
+
+1.0 r17 (ArtOfShred)
+- Updated API version for Flames of Ambition.
+
+1.0 r16 (ArtOfShred)
+- Updated API version for Markarth.
+
+1.0 r15 (ArtOfShred)
+- Updated API version for Stonethorn.
+
+1.0 r14 (ArtOfShred)
+- Updated the font media table to properly support backup fonts for languages with missing glyphs not included in Western fonts, thanks to the efforts of Calamath!
+
+1.0 r13 (ArtOfShred)
+- LMP now functions without LibStub but supports loading in with LibStub for compatibility.
+- LMP no longer includes an embedded LibStub. For older addons that may still require LibStub you will have to manually download it.
+
+1.0 r12 (ArtOfShred)
+- Embedded LibStub for dependency
+- LMP wasn't working without LibStub so no longer creates an empty table if LibStub is not loaded
+
+1.0 r11 (psypanda)
+- Fix nested folders on zip creating (oopsie)
+
+1.0 r10 (psypanda)
+- LibMediaProvider works now with and w/o LibStub
+
+1.0 r9 (psypanda)
+- updated API version number to 100027
+- added IsLibrary directive to manifest
+- added global variable "LibMediaProvider" for direct access without using LibStub
+
+1.0 r8 (Garkin)
+- updated API Version number to 100011
+- updated fonts for patch 1.6
+
+1.0 r7 (Seerah)
+- updated API Version number to 100010
+- removed fonts that are no longer contained in the game files (they have been added to the MediaStash addon, however)
+- changed default font from Arial Narrow (removed) to Univers 55
+
+1.0 r6 (Seerah)
+- preserve externally registered media types through library upgrades
+
+1.0 r5 (Seerah)
+- preserve externally registered media through library upgrades
+
+1.0 r4 (Seerah)
+- changed file path for solid textures to "" (since ESO treats an empty path as a solid color)
+- updated LibStub.lua
+
+1.0 r3 (Seerah)
+- fixed bug where default handle was not returned if handle provided in :Fetch() was not found
+
+1.0 r2 (Seerah)
+- changed the default for backgrounds and borders since I removed the "none" option
+
