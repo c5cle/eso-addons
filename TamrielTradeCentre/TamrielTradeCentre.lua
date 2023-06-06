@@ -545,6 +545,9 @@ function TamrielTradeCentre:GenerateDefaultSavedVar()
 	settings.EnableToolTipStat = true
 	settings.EnableToolTipLastUpdate = true
 
+	settings.SearchOnlineSort = "LastSeen"
+	settings.SearchOnlineOrder = "desc"
+
 	settings.MaxAutoRecordStoreEntryCount = 20000
 
 	settings.AdditionalPriceToChatLang = {}

@@ -569,6 +569,17 @@ local KioskIDNPCsTable = {
 	},
 	[105] = {
 		GetString(TTC_NPC_JAHIM),
+	},
+	[106] = {
+		GetString(TTC_NPC_ALVURATHENIM),
+		GetString(TTC_NPC_FALANI),
+		GetString(TTC_NPC_GRUDOGG),
+		GetString(TTC_NPC_RUNETHYNEBRENUR),
+		GetString(TTC_NPC_TULSMADRYON),
+		GetString(TTC_NPC_WYNSERPE),
+	},
+	[107] = {
+		GetString(TTC_NPC_THREDIS),
 	}
 }
 

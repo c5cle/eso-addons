@@ -278,6 +278,14 @@ ZO_CreateStringId("TTC_NPC_VARTHEVAGUE", "var the vague")
 
 ZO_CreateStringId("TTC_NPC_JAHIM", "jahim")
 
+ZO_CreateStringId("TTC_NPC_ALVURATHENIM", "alvura thenim")
+ZO_CreateStringId("TTC_NPC_FALANI", "falani")
+ZO_CreateStringId("TTC_NPC_GRUDOGG", "grudogg")
+ZO_CreateStringId("TTC_NPC_RUNETHYNEBRENUR", "runethyne brenur")
+ZO_CreateStringId("TTC_NPC_TULSMADRYON", "tuls madryon")
+ZO_CreateStringId("TTC_NPC_WYNSERPE", "wyn serpe")
+ZO_CreateStringId("TTC_NPC_THREDIS", "thredis")
+
 --Master Writ
 ZO_CreateStringId("TTC_MASTER_WRIT_ALCHEMYREGEX", "Craft an? (.-) with")
 ZO_CreateStringId("TTC_MASTER_WRIT_ENCHANTINGREGEX", "Craft an? (.*)")
@@ -308,6 +316,15 @@ ZO_CreateStringId("TTC_SETTING_ENABLEPRICETOCHATBUTTON_TOOLTIP", "The button und
 ZO_CreateStringId("TTC_SETTING_CLEARDATA", "Clear Data")
 ZO_CreateStringId("TTC_SETTING_CLEARRECORDEDENTRIES", "Clear Recorded Entries")
 ZO_CreateStringId("TTC_SETTING_TTCOPTIONS", "Tamriel Trade Centre Options")
+
+ZO_CreateStringId("TTC_SETTING_SEARCHONLINE", "Search Online")
+ZO_CreateStringId("TTC_SETTING_SEARCHONLINESORTBY", "Sort By")
+ZO_CreateStringId("TTC_SETTING_SEARCHONLINESORTBYLASTSEEN", "Last Seen")
+ZO_CreateStringId("TTC_SETTING_SEARCHONLINESORTBYPRICE", "Price")
+ZO_CreateStringId("TTC_SETTING_SEARCHONLINESORTORDER", "Order")
+ZO_CreateStringId("TTC_SETTING_SEARCHONLINESORTASC", "Ascending")
+ZO_CreateStringId("TTC_SETTING_SEARCHONLINESORTDESC", "Descending")
+
 
 --General
 ZO_CreateStringId("TTC_ERROR", "ERROR")

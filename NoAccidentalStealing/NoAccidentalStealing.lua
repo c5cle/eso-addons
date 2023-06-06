@@ -58,9 +58,9 @@ local function UpdateColor()
 end
 
 -- the default UI calls this function before interacting with the target
--- when FISHING_MANAGER.StartInteraction returns true, the interaction is cancelled
-local oldInteract = FISHING_MANAGER.StartInteraction
-FISHING_MANAGER.StartInteraction = function(...)
+-- when the hook returns true, the interaction is cancelled
+local oldInteract = INTERACTIVE_WHEEL_MANAGER.StartInteraction
+INTERACTIVE_WHEEL_MANAGER.StartInteraction = function(self, interactionType, ...)
 	-- start isn't nil if we are currently setting the double-tap intervall
 	if start then
 		-- is this the first tap?
@@ -74,11 +74,11 @@ FISHING_MANAGER.StartInteraction = function(...)
 			-- refresh the options panel to display the new time frame
 			CALLBACK_MANAGER:FireCallbacks("LAM-RefreshPanel", panel)
 		end
-		return
+		return true
 	end
 	
 	local preventStealing = (not IsStealingAllowed()) and (not IsInteractionAllowed())
-	if preventStealing then
+	if preventStealing and interactionType == ZO_INTERACTIVE_WHEEL_TYPE_FISHING then
 		-- if we have the double-tap feature enabled, then we have to confirm stealing for settings.delay seconds
 		if settings.delay > 0 then
 			ConfirmStealing(true)
@@ -86,7 +86,7 @@ FISHING_MANAGER.StartInteraction = function(...)
 		end
 		return true
 	else
-		return oldInteract(...)
+		return oldInteract(self, interactionType, ...)
 	end
 end
 
@@ -115,7 +115,7 @@ local function OnAddonLoaded( _, addon )
 	if addon ~= "NoAccidentalStealing" then
 		return
 	end
-	settings = ZO_SavedVars:New("NAS_SavedVariables", 1, "settings", {delay = 250, criminalPressDuration = 0}) --默认不妨碍死灵施放犯罪法术
+	settings = ZO_SavedVars:New("NAS_SavedVariables", 1, "settings", {delay = 250, criminalPressDuration = 750})
 	NAS.settings = settings
 	
 	NAS.InitializeAbility()

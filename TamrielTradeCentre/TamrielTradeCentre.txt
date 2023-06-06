@@ -1,7 +1,7 @@
-## APIVersion: 101037
+## APIVersion: 101038
 ## Title: |c00bfff[增强]-TamrielTradeCentre(TTC物品价格显示)|r
 ## Description: Addon for TamrielTradeCentre.com
-## Version: 4.10.146.18293
+## Version: 4.11.318.12202
 ## Author: TamrielTradeCentre.com
 ## DependsOn: LibAddonMenu-2.0>=31 LibCustomMenu>=721
 ## SavedVariables: TamrielTradeCentreVars

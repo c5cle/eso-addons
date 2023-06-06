@@ -13,26 +13,6 @@ function TamrielTradeCentre:InitSettingMenu()
 		},
 		{
 			type = "checkbox",
-			name = GetString(TTC_SETTING_ENABLESEARCHONLINEBUTTON), 
-			getFunc = function()
-						  return self.Settings.EnableItemSearchOnlineBtn
-					  end,
-			setFunc = function(value)
-						  self.Settings.EnableItemSearchOnlineBtn = value
-					  end,
-		},
-		{
-			type = "checkbox",
-			name = GetString(TTC_SETTING_ENABLEPRICEHISTORYONLINEBUTTON), 
-			getFunc = function()
-						  return self.Settings.EnableItemPriceDetailOnlineBtn
-					  end,
-			setFunc = function(value)
-						  self.Settings.EnableItemPriceDetailOnlineBtn = value
-					  end,
-		},
-		{
-			type = "checkbox",
 			name = GetString(TTC_SETTING_ENABLEITEMSOLDNOTIFICATION), 
 			tooltip = GetString(TTC_SETTING_ENABLEITEMSOLDNOTIFICATION_TOOLTIP),
 			getFunc = function()
@@ -76,6 +56,66 @@ function TamrielTradeCentre:InitSettingMenu()
 						  self.Settings.MaxAutoRecordStoreEntryCount = value
 					  end,
 			width = "full",
+		},
+		{
+			type = "header",
+			name = GetString(TTC_SETTING_SEARCHONLINE),
+		},
+		{
+			type = "checkbox",
+			name = GetString(TTC_SETTING_ENABLESEARCHONLINEBUTTON), 
+			getFunc = function()
+						  return self.Settings.EnableItemSearchOnlineBtn
+					  end,
+			setFunc = function(value)
+						  self.Settings.EnableItemSearchOnlineBtn = value
+					  end,
+		},
+		{
+			type = "dropdown",
+			name = GetString(TTC_SETTING_SEARCHONLINESORTBY), 
+			choices = {
+				GetString(TTC_SETTING_SEARCHONLINESORTBYLASTSEEN),
+				GetString(TTC_SETTING_SEARCHONLINESORTBYPRICE)
+			},
+			choicesValues = {
+				"LastSeen",
+				"Price"
+			},
+			getFunc = function()
+						  return self.Settings.SearchOnlineSort
+					  end,
+			setFunc = function(value)
+						  self.Settings.SearchOnlineSort = value
+					  end,
+		},
+		{
+			type = "dropdown",
+			name = GetString(TTC_SETTING_SEARCHONLINESORTORDER),
+			choices = {
+				GetString(TTC_SETTING_SEARCHONLINESORTASC),
+				GetString(TTC_SETTING_SEARCHONLINESORTDESC)
+			},
+			choicesValues = {
+				"asc",
+				"desc"
+			},
+			getFunc = function()
+						  return self.Settings.SearchOnlineOrder
+					  end,
+			setFunc = function(value)
+						  self.Settings.SearchOnlineOrder = value
+					  end,
+		},
+		{
+			type = "checkbox",
+			name = GetString(TTC_SETTING_ENABLEPRICEHISTORYONLINEBUTTON), 
+			getFunc = function()
+						  return self.Settings.EnableItemPriceDetailOnlineBtn
+					  end,
+			setFunc = function(value)
+						  self.Settings.EnableItemPriceDetailOnlineBtn = value
+					  end,
 		},
 		{
 			type = "header",

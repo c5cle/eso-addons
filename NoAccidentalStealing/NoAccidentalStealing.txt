@@ -1,13 +1,13 @@
 ## Title: |c00ff00[必装]-NoAccidentalStealing(防止意外偷窃)|r
 ## Author: Shinni
-## Version 1.12
+## Version 1.13
 ## DependsOn: LibAddonMenu-2.0
 ## SavedVariables: NAS_SavedVariables
-## APIVersion: 101035 101036
+## AddOnVersion: 113
+## APIVersion: 101038
 
 language\en.lua
 language\$(language).lua
 NoAccidentalStealing.lua
 Abilities.lua
 Bindings.xml
-; RavenVersion: 20221231130625

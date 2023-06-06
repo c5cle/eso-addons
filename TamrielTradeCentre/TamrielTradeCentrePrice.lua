@@ -215,6 +215,14 @@ function TamrielTradeCentrePrice:SearchOnline(itemInfo)
 
 	local langCode = TamrielTradeCentre:GetLangCode()
 
+	if (_settings.SearchOnlineSort ~= nil) then
+		url = url .. "&SortBy=" .. _settings.SearchOnlineSort
+	end
+
+	if (_settings.SearchOnlineOrder ~= nil) then
+		url = url .. "&Order=" .. _settings.SearchOnlineOrder
+	end
+
 	if (langCode ~= nil) then
 		url = url .. "&lang=" .. langCode
 	end

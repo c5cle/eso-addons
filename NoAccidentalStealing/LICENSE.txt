@@ -1,10 +1,7 @@
 
-Except otherwise noted, this add-on is © 2020 Shinni, under a Creative Commons Attribution-NonComercial-NoDerivatives license:
+Except otherwise noted, this add-on is © 2023 Shinni, under a Creative Commons Attribution-NonComercial-NoDerivatives license:
 https://creativecommons.org/licenses/by-nc-nd/4.0/
 https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
-
-The library "LibAddonMenu" is © 2016 Ryan Lakanen (Seerah), used under The Artistic License 2.0:
-see libs/LibAddonMenu-2.0/LibAddonMenu-2.0/LICENSE
 
 The localizations (in the language folder) are provided by:
 Japanese - k0ta0uchi ( https://www.esoui.com/forums/member.php?u=25811 )

@@ -31,6 +31,10 @@ L.NAS_DOUBLE_TAP_SLIDER_TOOLTIP		= "You can set the double tap intervall directl
 L.NAS_CONTAINER_HEAD				= "Container Settings"
 L.NAS_CONTAINER_CHECKBOX			= "Allow searching containers"
 L.NAS_CONTAINER_CHECKBOX_TOOLTIP	= "Opening a container is not a crime. When this option is enabled, you can open containers even if you aren't stealthed."
+L.NAS_ABILITY_HEAD					= "Criminal Abilities"
+L.NAS_ABILITY_TEXT					= "Some necromancer abilities count as crimes. These abilities will be blocked while you are out of combat, unless you hold the key for a certain duration.\nIf set to 0, skills won't be blocked."
+L.NAS_ABILITY_SLIDER				= "Hold duration (in ms)"
+L.NAS_ABILITY_SLIDER_TOOLTIP		= ""
 
 for tag, localizedString in pairs(L) do
 	NAS.localization[tag] = localizedString
