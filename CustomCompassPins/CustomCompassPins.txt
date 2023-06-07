@@ -3,7 +3,7 @@
 ; registered trademarks or trademarks of ZeniMax Media Inc. in the United
 ; States and/or other countries. All rights reserved.
 
-## Title: |c00bfff[增强]-CustomCompassPins(自定义指南针)|r
+## Title: |cfa8072[渚濊禆]-CustomCompassPins(鑷畾涔夋寚鍗楅拡)|r
 ## Version: 1.32
 ## AddOnVersion: 32
 ## Author: Shinni

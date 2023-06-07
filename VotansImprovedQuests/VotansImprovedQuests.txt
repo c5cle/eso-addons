@@ -1,4 +1,4 @@
-## Title: |c00bfff[ÔöÇ¿]-ImprovedQuests(µØÍ¼À¸ÈÎÎñ¼ÓÇ¿)|r
+## Title: |c00bfff[å¢å¼º]-ImprovedQuests(åœ°å›¾æ ä»»åŠ¡åŠ å¼º)|r
 ## Author: votan
 ## Description: Adds additional information to quests tab in world map.
 ## Version: 1.3.1

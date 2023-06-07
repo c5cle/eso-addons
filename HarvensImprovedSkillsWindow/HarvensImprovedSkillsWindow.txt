@@ -3,7 +3,7 @@
 ; registered trademarks or trademarks of ZeniMax Media Inc. in the United
 ; States and/or other countries. All rights reserved.
 
-## Title: |c00bfff[ÔöÇ¿]-ImprovedSkillsWindow(¸ÄÉÆ¼¼ÄÜÏÔÊ¾)|r
+## Title: |c00bfff[å¢å¼º]-ImprovedSkillsWindow(æ”¹å–„æŠ€èƒ½æ˜¾ç¤º)|r
 ## Author: Harven & votan
 ## Version: 2.0.6
 ## APIVersion: 101036 101037
