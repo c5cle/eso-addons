@@ -2,7 +2,7 @@ local Addon = {}
 Addon.Name = "displayleads"
 Addon.DisplayName = "Display Leads"
 Addon.Author = "remosito"
-Addon.Version = "38.0"
+Addon.Version = "38.1"
 
 
 
